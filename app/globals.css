@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --red: #FF0000;
+}
+
+.dropdown {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.activeSelectLang {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
