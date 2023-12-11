@@ -58,11 +58,30 @@ export type InfoSectionItem = {
 
 export type InfoSection = {
     title: string;
+    btn_text: string;
     content: InfoSectionItem[];
 }
 
 
 export type HomepageInfoSection = {
+    en: InfoSection;
+    ru: InfoSection;
+    am: InfoSection;
+};
+
+export type AboutUsSectionItem = {
+    id: number;
+    image: string;
+    description: string;
+}
+
+export type AboutUsSection = {
+    title: string;
+    content: InfoSectionItem[];
+}
+
+
+export type AboutUsInfoSection = {
     en: InfoSection;
     ru: InfoSection;
     am: InfoSection;

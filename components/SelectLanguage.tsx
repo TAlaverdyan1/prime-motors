@@ -17,6 +17,7 @@ export function SelectLanguage() {
         localStorage.setItem('primeMotors-Language', selectedLanguage);
         sessionStorage.clear();
         window.location.reload();
+        window.scrollTo(0, 0);
     };
 
     return (
