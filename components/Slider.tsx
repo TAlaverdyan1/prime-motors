@@ -52,7 +52,7 @@ const Slider = () => {
                     <div key={el.id}
                         className={` absolute w-[100%] h-[100vh] text-center flex justify-center items-center gap-6 flex-col bg-cover bg-no-repeat bg-center bg-fixed
                         ${currentSlide === el.id ? " opacity-100" : " opacity-0"}`}
-                        style={{ backgroundImage: `url(${el.image})` }}>
+                        style={{ backgroundImage: `url(${el.image})`, backgroundSize: 'cover'  }}>
                         <div className=" text-[1.5rem] px-4 text-white font-bold md:px-6 md:text-[2rem] lg:px-24 lg:text-[3rem]">{el.title}</div>
                         <Link href={el.route} className=" p-3 bg-red text-white font-bold md:px-8 md:py-4 md:text-[20px]">{el.btn_text}</Link>
                     </div>
