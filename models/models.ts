@@ -82,9 +82,46 @@ export type AboutUsSection = {
 
 
 export type AboutUsInfoSection = {
-    en: InfoSection;
-    ru: InfoSection;
-    am: InfoSection;
+    en: AboutUsSection;
+    ru: AboutUsSection;
+    am: AboutUsSection;
 };
 
 
+
+export type OurMissionSectionItem = {
+    id: number;
+    image: string;
+    description: string;
+}
+
+export type OurMissionSection = {
+    title: string;
+    content: OurMissionSectionItem[];
+}
+
+
+export type OurMissionInfoSection = {
+    en: OurMissionSection;
+    ru: OurMissionSection;
+    am: OurMissionSection;
+};
+
+
+export type ServicesSectionItem = {
+    id: number;
+    image: string;
+    description: string;
+}
+
+export type ServicesSection = {
+    title: string;
+    content: InfoSectionItem[];
+}
+
+
+export type ServicesInfoSection = {
+    en: ServicesSection;
+    ru: ServicesSection;
+    am: ServicesSection;
+};

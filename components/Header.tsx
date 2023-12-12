@@ -58,7 +58,7 @@ const Header = () => {
                                             <div
                                                 onMouseLeave={() => setVisible(false)}
                                                 className={`${visible ? "flex" : " hidden"}
-                                                    ${showNavBar ? " flex-col bg-red mt-4" : " absolute justify-end w-full right-0 z-10 bg-red shadow-md py-1 px-20 mt-1"}`}>
+                                                    ${showNavBar ? " flex-col bg-red mt-4" : " absolute justify-end w-full top-[95%] right-0 z-10 bg-red shadow-md py-1 px-20 mt-1"}`}>
                                                 {el.subtitles?.map((subtitle: NavbarItem) => (
                                                     <Link
                                                         key={subtitle.id}
@@ -77,7 +77,7 @@ const Header = () => {
 
                     {
                         showNavBar ?
-                            <div className=" absolute top-2 right-2 text-[24px] cursor-pointer" onClick={() => setShowNavBar(!showNavBar)}> <IoCloseCircle /> </div> : " "
+                            <div className=" absolute top-3 right-3 text-[30px] cursor-pointer" onClick={() => setShowNavBar(!showNavBar)}> <IoCloseCircle /> </div> : " "
                     }
                 </div>
                 <SelectLanguage />
