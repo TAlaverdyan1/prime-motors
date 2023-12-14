@@ -44,5 +44,5 @@ export function SelectLanguage() {
                 <FaAngleDown />
             </div>
         </div>
-    );
-}
+    )
+};

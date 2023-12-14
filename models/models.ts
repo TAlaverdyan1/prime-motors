@@ -110,6 +110,7 @@ export type OurMissionInfoSection = {
 
 export type ServicesSectionItem = {
     id: number;
+    subtitle: string;
     image: string;
     description: string;
 }
@@ -124,4 +125,68 @@ export type ServicesInfoSection = {
     en: ServicesSection;
     ru: ServicesSection;
     am: ServicesSection;
+};
+
+
+export type PartnersSectionItem = {
+    id: number;
+    subtitle: string;
+    image: string;
+    link: string;
+    btn_text: string;
+    description: string;
+}
+
+export type PartnersSection = {
+    title: string;
+    content: PartnersSectionItem[];
+}
+
+
+export type PartnersInfoSection = {
+    en: PartnersSection;
+    ru: PartnersSection;
+    am: PartnersSection;
+};
+
+
+
+export type BranchesSectionItem = {
+    id: number;
+    subtitle: string;
+    image: string;
+    description: string;
+}
+
+export type BranchesSection = {
+    title: string;
+    content: PartnersSectionItem[];
+}
+
+
+export type BranchesInfoSection = {
+    en: BranchesSection;
+    ru: BranchesSection;
+    am: BranchesSection;
+};
+
+
+export type BlogsSectionItem = {
+    id: number;
+    subtitle: string;
+    image: string;
+    date: string;
+    description: string;
+}
+
+export type BlogSection = {
+    title: string;
+    content: PartnersSectionItem[];
+}
+
+
+export type BlogInfoSection = {
+    en: BlogSection;
+    ru: BlogSection;
+    am: BlogSection;
 };

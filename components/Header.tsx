@@ -63,7 +63,7 @@ const Header = () => {
                                                     <Link
                                                         key={subtitle.id}
                                                         href={subtitle.route}
-                                                        className=" block py-2 px-4 capitalize text-white hover:font-bold"
+                                                        className=" block py-2 px-4 capitalize text-[17px] text-white hover:font-bold"
                                                     >
                                                         {subtitle.title}
                                                     </Link>
@@ -83,7 +83,7 @@ const Header = () => {
                 <SelectLanguage />
             </div>
         </div>
-    );
+    )
 };
 
 export { Header };

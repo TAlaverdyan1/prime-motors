@@ -14,10 +14,10 @@ const OurMission = () => {
         const storedLanguage = localStorage.getItem('primeMotors-Language');
         setCurrentLanguage(storedLanguage || 'en');
     }, []);
-    
+
 
     return (
-        <div className=" my-40">
+        <div className=" mt-40">
             <div className=" text-red font-bold text-[30px] text-center px-4">{currentOurMissionSection.title}</div>
             {
                 currentOurMissionSection?.content.map((el: OurMissionSectionItem) => (
@@ -28,7 +28,7 @@ const OurMission = () => {
                 ))
             }
         </div>
-    );
+    )
 };
 
 export { OurMission };

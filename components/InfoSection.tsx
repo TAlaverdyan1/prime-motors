@@ -34,7 +34,7 @@ const InfoSection = () => {
                 </Link>
             </div>
         </div>
-    );
+    )
 };
 
 export { InfoSection };

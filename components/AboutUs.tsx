@@ -17,7 +17,7 @@ const AboutUs = () => {
 
 
     return (
-        <div className=" my-20">
+        <div className=" mt-20">
             <div className=" text-red font-bold text-[30px] text-center px-4">{currentAboutUsSection?.title}</div>
             {
                 currentAboutUsSection?.content.map((el: AboutUsSectionItem) => (
@@ -28,7 +28,7 @@ const AboutUs = () => {
                 ))
             }
         </div>
-    );
+    )
 };
 
 export { AboutUs };

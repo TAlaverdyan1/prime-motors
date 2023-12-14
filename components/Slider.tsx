@@ -84,6 +84,6 @@ const Slider = () => {
             </div>
         </div>
     )
-}
+};
 
 export { Slider };
