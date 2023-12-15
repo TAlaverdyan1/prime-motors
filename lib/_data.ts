@@ -1355,3 +1355,96 @@ export const blogSection = {
         ],
     },
 }
+
+
+
+export const promotionSection = {
+    en: {
+        title: "promotion",
+        content: [
+            {
+                id: 1,
+                subtitle: "Lorem ipsum",
+                image: "/images/slide2.jpg",
+                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
+            Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
+            ipsum volutpat, ac consectetur elit suscipit.`,
+            },
+            {
+                id: 2,
+                subtitle: "Lorem ipsum",
+                image: "/images/slide3.jpg",
+                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
+            Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
+            ipsum volutpat, ac consectetur elit suscipit.`,
+            },
+            {
+                id: 3,
+                subtitle: "Lorem ipsum",
+                image: "/images/slide1.jpg",
+                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
+            Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
+            ipsum volutpat, ac consectetur elit suscipit.`,
+            },
+        ],
+    },
+    ru: {
+        title: "продвижение",
+        content: [
+            {
+                id: 1,
+                subtitle: "Клиент важен",
+                image: "/images/slide2.jpg",
+                description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
+                Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
+                история, и за ней будет следить разработчик.`,
+            },
+            {
+                id: 2,
+                subtitle: "Клиент важен",
+                image: "/images/slide3.jpg",
+                description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
+                Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
+                история, и за ней будет следить разработчик.`,
+            },
+            {
+                id: 3,
+                subtitle: "Клиент важен",
+                image: "/images/slide1.jpg",
+                description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
+                Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
+                история, и за ней будет следить разработчик.`,
+            },
+        ],
+    },
+    am: {
+        title: "առաջխաղացում",
+        content: [
+            {
+                id: 1,
+                subtitle: "Հաճախորդը կարևոր է",
+                image: "/images/slide2.jpg",
+                description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
+                Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
+                ունի, և դրան կհետևի մշակողը։`,
+            },
+            {
+                id: 2,
+                subtitle: "Հաճախորդը կարևոր է",
+                image: "/images/slide3.jpg",
+                description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
+                Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
+                ունի, և դրան կհետևի մշակողը։`,
+            },
+            {
+                id: 3,
+                subtitle: "Հաճախորդը կարևոր է",
+                image: "/images/slide1.jpg",
+                date: "Դեկտեմբեր 13, 2023",
+                description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
+                Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
+                ունի, և դրան կհետևի մշակողը։`,
+            },
+        ],
+    },
+}

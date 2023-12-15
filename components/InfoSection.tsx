@@ -19,7 +19,7 @@ const InfoSection = () => {
 
     return (
         <div className=" mt-20">
-            <div className=" text-red font-bold text-[30px] text-center px-4">{currentInfoSection?.title}</div>
+            <div className=" text-red font-bold text-[30px] capitalize text-center px-4">{currentInfoSection?.title}</div>
             {
                 currentInfoSection.content.map((el: InfoSectionItem) => (
                     <div key={el.id}>

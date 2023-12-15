@@ -19,18 +19,20 @@ const Blog = () => {
 
     return (
         <div className=" mt-20">
-            <div className=" text-red font-bold text-[30px] text-center px-4 m-10">{currentBlogSection?.title}</div>
+            <div className=" text-red font-bold text-[30px] capitalize text-center px-4 m-10">{currentBlogSection?.title}</div>
             {
-                currentBlogSection?.content.map((el: BlogsSectionItem) => (
+                currentBlogSection?.content.slice().reverse().map((el: BlogsSectionItem) => (
                     <div key={el.id}>
                         <div className=" bg-red py-[.5px] w-full"></div>
-                        <div className=" flex flex-row">
-                            <div className=" my-6 w-3/4 px-10 text-left">
-                                <div className=" text-[20px] font-bold m-3 capitalize">{el.subtitle}</div>
-                                <div className="">{el.description}</div>
-                                <div className=" mt-2">{el.date}</div>
+                        <div className=" flex flex-row mb-5">
+                            <div className=" my-6 w-[100%] px-4 text-left md:w-3/4 md:px-6 lg:px-12">
+                                <div className=" text-[20px] font-bold my-6 capitalize text-center md:text-left">{el.subtitle}</div>
+                                <div className=" text-justify md:text-left">{el.description}</div>
+                                <div className=" mt-4">{el.date}</div>
                             </div>
-                            <div className="w-1/4 relative m-4" style={{ height: 'auto' }}><Image src={el.image} alt="iourMissionSectionImg" fill className=" object-cover" /></div>
+                            <div className=" hidden md:flex relative mt-4 mr-4 md:mr-6 lg:mr-12" style={{ width: '450px', height: '300px' }}>
+                                <Image src={el.image} width={450} height={300} layout="responsive" alt="iourMissionSectionImg" className=" object-cover" />
+                            </div>
                         </div>
                     </div>
                 ))

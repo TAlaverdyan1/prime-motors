@@ -48,7 +48,7 @@ const Header = () => {
                                     onMouseMove={() => { hasSubtitles ? setVisible(true) : setVisible(false) }}>
                                     <Link
                                         href={el.route}
-                                        className={` text-[18px] font-bold hover:text-red 
+                                        className={` text-[18px] font-bold hover:text-red capitalize 
                                         ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''} 
                                         ${showNavBar ? " " : "hover:border-b-2 hover:border-b-red"}`}>
                                         {el.title}

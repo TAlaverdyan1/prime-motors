@@ -18,7 +18,7 @@ const Partners = () => {
 
     return (
         <div className=" mt-20">
-            <div className=" text-red font-bold text-[30px] text-center px-4">{currentPartnersSection.title}</div>
+            <div className=" text-red font-bold text-[30px] capitalize text-center px-4">{currentPartnersSection.title}</div>
             {
                 currentPartnersSection?.content.map((el: PartnersSectionItem) => (
                     <div key={el.id} className={` block custom:flex items-center mt-8 ${el.id % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>

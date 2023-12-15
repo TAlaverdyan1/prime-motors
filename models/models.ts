@@ -190,3 +190,23 @@ export type BlogInfoSection = {
     ru: BlogSection;
     am: BlogSection;
 };
+
+
+export type PromotionSectionItem = {
+    id: number;
+    subtitle: string;
+    image: string;
+    description: string;
+}
+
+export type PromotionSection = {
+    title: string;
+    content: PromotionSectionItem[];
+}
+
+
+export type PromotionInfoSection = {
+    en: PromotionSection;
+    ru: PromotionSection;
+    am: PromotionSection;
+};
