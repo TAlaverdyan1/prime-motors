@@ -1,19 +1,14 @@
 "use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useLanguage } from "./SelectLanguage";
 import { ourMissionSection } from "@/lib/_data";
 import { OurMissionInfoSection, OurMissionSectionItem } from "@/models/models";
 
 
 const OurMission = () => {
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
+    const currentLanguage = useLanguage();
 
     const currentOurMissionSection = ourMissionSection[currentLanguage as keyof OurMissionInfoSection];
-
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
 
 
     return (

@@ -1,21 +1,15 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useLanguage } from "./SelectLanguage";
 import { homepageInfoSection } from "@/lib/_data";
 import { HomepageInfoSection, InfoSectionItem } from "@/models/models";
 
 
 const InfoSection = () => {
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
+    const currentLanguage = useLanguage();
 
     const currentInfoSection = homepageInfoSection[currentLanguage as keyof HomepageInfoSection];
-
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
-
 
     return (
         <div className=" mt-20">

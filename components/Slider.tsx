@@ -3,18 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useLanguage } from "./SelectLanguage";
 import { slider } from "@/lib/_data";
 import { SliderData, SliderItem } from "@/models/models";
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState<number>(1);
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
+    const currentLanguage = useLanguage();
     const currentSlider = slider[currentLanguage as keyof SliderData];
 
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -51,11 +48,15 @@ const Slider = () => {
             {
                 currentSlider.map((el: SliderItem) => (
                     <div key={el.id}
-                        className={` absolute w-[100%] h-[100vh] text-center flex justify-center items-center gap-6 object-cover flex-col bg-cover bg-no-repeat bg-center bg-fixed
-                        ${currentSlide === el.id ? " opacity-100" : " opacity-0"}`}>
+                        className={` absolute w-[100%] h-[100vh] text-center flex justify-center items-center gap-6 object-cover flex-col bg-cover bg-no-repeat 
+                        bg-center bg-fixed ${currentSlide === el.id ? " opacity-100" : " opacity-0"}`}>
                         <Image src={el.image} alt="sliderImg" fill className="object-cover w-full h-full" />
-                        <div className=" text-[1.5rem] px-4 text-white uppercase font-bold md:px-6 md:text-[2rem] lg:px-24 lg:text-[3rem] z-10">{el.title}</div>
-                        <Link href={el.route} className=" p-3 bg-red hover:bg-darkRed text-white font-bold md:px-8 md:py-4 md:text-[20px] capitalize z-10">{el.btn_text}</Link>
+                        <div className=" text-[1.5rem] px-4 text-white uppercase font-bold md:px-6 md:text-[2rem] lg:px-24 lg:text-[3rem] z-10">
+                            {el.title}
+                        </div>
+                        <Link href={el.route} className=" p-3 bg-red hover:bg-darkRed text-white font-bold md:px-8 md:py-4 md:text-[20px] capitalize z-10">
+                            {el.btn_text}
+                        </Link>
                     </div>
                 ))
             }

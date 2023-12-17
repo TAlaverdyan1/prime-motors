@@ -4,6 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { IoMenu, IoCloseCircle } from "react-icons/io5";
+import { useLanguage } from "./SelectLanguage";
 import { navbar } from "@/lib/_data";
 import { NavbarItem, NavbarData } from "@/models/models";
 import { SelectLanguage } from "./SelectLanguage";
@@ -11,14 +12,9 @@ import { SelectLanguage } from "./SelectLanguage";
 
 const Header = () => {
     const pathname = usePathname();
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
+    const currentLanguage = useLanguage();
     const [visible, setVisible] = useState<boolean>(false);
     const [showNavBar, setShowNavBar] = useState<boolean>(false);
-
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
 
     const currentNavbar = navbar[currentLanguage as keyof NavbarData];
 

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useLanguage } from "./SelectLanguage";
 import { contactUsSection } from "@/lib/_data";
 import { ContactUsInfoSection, ContactUsSectionItem } from "@/models/models";
 
@@ -7,14 +8,9 @@ const ContactUs = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [successMsg, setSuccessMsg] = useState<boolean>(false);
     const [errorMsg, setErrorMsg] = useState<boolean>(false);
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
+    const currentLanguage = useLanguage();
 
     const currentContactUsSection = contactUsSection[currentLanguage as keyof ContactUsInfoSection];
-
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();

@@ -1,18 +1,14 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useLanguage } from "./SelectLanguage";
 import { servicesSection } from "@/lib/_data";
 import { ServicesInfoSection, ServicesSectionItem } from "@/models/models";
 
 const Services = () => {
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
+    const currentLanguage = useLanguage();
 
     const currentServicesSection = servicesSection[currentLanguage as keyof ServicesInfoSection];
-
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
 
 
     return (
@@ -29,7 +25,6 @@ const Services = () => {
                     </div>
                 ))
             }
-
         </div>
     )
 };

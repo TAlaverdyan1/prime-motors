@@ -1,19 +1,14 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useLanguage } from "./SelectLanguage";
 import { aboutUsSection } from "@/lib/_data";
 import { AboutUsInfoSection, AboutUsSectionItem } from "@/models/models";
 
 
 const AboutUs = () => {
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
+    const currentLanguage = useLanguage();
 
     const currentAboutUsSection = aboutUsSection[currentLanguage as keyof AboutUsInfoSection];
-
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
 
 
     return (

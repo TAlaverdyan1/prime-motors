@@ -3,14 +3,21 @@ import { useState, useEffect } from 'react';
 import { FaAngleDown } from 'react-icons/fa';
 
 
-export function SelectLanguage() {
+export const useLanguage = (): string => {
     const [currentLanguage, setCurrentLanguage] = useState<string>('en');
-    const [showSelector, setShowSelector] = useState<boolean>(false);
 
     useEffect(() => {
         const storedLanguage = localStorage.getItem('primeMotors-Language');
         setCurrentLanguage(storedLanguage || 'en');
     }, []);
+
+    return currentLanguage;
+};
+
+
+export function SelectLanguage() {
+    const currentLanguage = useLanguage() || "en";
+    const [showSelector, setShowSelector] = useState<boolean>(false);
 
     const onChangeSelect = (e: React.MouseEvent<HTMLDivElement>) => {
         const selectedLanguage = (e.target as HTMLDivElement).innerText.toLowerCase();
@@ -46,6 +53,3 @@ export function SelectLanguage() {
         </div>
     )
 };
-
-
-export const CurrentLanguage = SelectLanguage;

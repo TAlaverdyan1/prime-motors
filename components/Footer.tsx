@@ -1,19 +1,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { useLanguage } from "./SelectLanguage";
 import { footer, socialLinks } from "@/lib/_data";
 import { FooterItem, FooterData } from "@/models/models";
 
 const Footer = () => {
-    const [currentLanguage, setCurrentLanguage] = useState<string>('en');
-
-    useEffect(() => {
-        const storedLanguage = localStorage.getItem('primeMotors-Language');
-        setCurrentLanguage(storedLanguage || 'en');
-    }, []);
+    const currentLanguage = useLanguage();
 
     const currentFooter = footer[currentLanguage as keyof FooterData];
 
