@@ -210,3 +210,27 @@ export type PromotionInfoSection = {
     ru: PromotionSection;
     am: PromotionSection;
 };
+
+
+export type ContactUsSectionItem = {
+    id: number;
+    name: string;
+    email: string;
+    message: string;
+    btn_text: string;
+    message_dispatch: string;
+    successMsg: string;
+    errorMsg: string;
+}
+
+export type ContactUsSection = {
+    title: string;
+    content: ContactUsSectionItem[];
+}
+
+
+export type ContactUsInfoSection = {
+    en: ContactUsSection;
+    ru: ContactUsSection;
+    am: ContactUsSection;
+};

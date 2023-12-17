@@ -19,7 +19,7 @@ const Branches = () => {
 
     return (
         <div className=" mt-20">
-            <div className=" text-red font-bold text-[30px] capitalize text-center px-4">{currentBranchesSection?.title}</div>
+            <div className=" text-red font-bold text-[30px] uppercase text-center px-4">{currentBranchesSection?.title}</div>
             {
                 currentBranchesSection?.content.map((el: BranchesSectionItem) => (
                     <div key={el.id} className={` block custom:flex items-center mt-8 ${el.id % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>

@@ -1448,3 +1448,53 @@ export const promotionSection = {
         ],
     },
 }
+
+
+export const contactUsSection = {
+    en: {
+        title: "Contact Us",
+        content: [
+            {
+                id: 1,
+                title: "Contact Us",
+                name: "Name",
+                email: "Email",
+                message: "Message",
+                btn_text: "Send",
+                message_dispatch: "Sending message...",
+                successMsg: "Your message was sent successfully!",
+                errorMsg: "Failed to send your message. Please try again later."
+            },
+        ],
+    },
+    ru: {
+        title: "Связаться с нами",
+        content: [
+            {
+                id: 1,
+                name: "Имя",
+                email: "Электронная почта",
+                message: "Сообщение",
+                btn_text: "Отправлять",
+                message_dispatch: "Отправка сообщения...",
+                successMsg: "Ваше сообщение было успешно отправлено!",
+                errorMsg: "Не удалось отправить сообщение. Повторите попытку позже."
+            },
+        ],
+    },
+    am: {
+        title: "Կապ",
+        content: [
+            {
+                id: 1,
+                name: "Անուն",
+                email: "Էլ-փոստ",
+                message: "Հաղորդագրություն",
+                btn_text: "Ուղարկել",
+                message_dispatch: "Ուղարկում է հաղորդագրությունը...",
+                successMsg: "Ձեր հաղորդագրությունը հաջողությամբ ուղարկվեց։",
+                errorMsg: "Ձեր հաղորդագրությունը չհաջողվեց ուղարկել: Խնդրում ենք փորձել ավելի ուշ։"
+            },
+        ],
+    },
+}

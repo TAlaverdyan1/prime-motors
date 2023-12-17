@@ -19,7 +19,7 @@ const Blog = () => {
 
     return (
         <div className=" mt-20">
-            <div className=" text-red font-bold text-[30px] capitalize text-center px-4 m-10">{currentBlogSection?.title}</div>
+            <div className=" text-red font-bold text-[30px] uppercase text-center px-4 m-10">{currentBlogSection?.title}</div>
             {
                 currentBlogSection?.content.slice().reverse().map((el: BlogsSectionItem) => (
                     <div key={el.id}>

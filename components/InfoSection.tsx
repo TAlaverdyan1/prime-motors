@@ -19,7 +19,7 @@ const InfoSection = () => {
 
     return (
         <div className=" mt-20">
-            <div className=" text-red font-bold text-[30px] capitalize text-center px-4">{currentInfoSection?.title}</div>
+            <div className=" text-red font-bold text-[30px] uppercase text-center px-4">{currentInfoSection?.title}</div>
             {
                 currentInfoSection.content.map((el: InfoSectionItem) => (
                     <div key={el.id}>
@@ -30,7 +30,7 @@ const InfoSection = () => {
             }
             <div className=" my-9">
                 <Link href={"/about-us"} className="p-3 text-red font-bold border-2 border-red md:px-8 md:text-[20px]">
-                    <span className=" hover:border-b-2 hover:border-b-red">{currentInfoSection.btn_text}</span>
+                    <span className=" hover:border-b-2 hover:border-b-red duration-300">{currentInfoSection.btn_text}</span>
                 </Link>
             </div>
         </div>

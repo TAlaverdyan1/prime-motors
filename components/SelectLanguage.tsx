@@ -46,3 +46,6 @@ export function SelectLanguage() {
         </div>
     )
 };
+
+
+export const CurrentLanguage = SelectLanguage;

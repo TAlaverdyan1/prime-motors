@@ -12,11 +12,12 @@ const config: Config = {
       cmd: "850px",
       custom: "1050px",
       lg: "1024px",
-      xl:	"1280px",
+      xl: "1280px",
     },
     extend: {
       colors: {
         red: 'var(--red)',
+        darkRed: 'var(--darkRed)',
       },
     },
   },
