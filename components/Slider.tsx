@@ -49,8 +49,8 @@ const Slider = () => {
                 currentSlider.map((el: SliderItem) => (
                     <div key={el.id}
                         className={` absolute w-[100%] h-[100vh] text-center flex justify-center items-center gap-6 object-cover flex-col bg-cover bg-no-repeat 
-                        bg-center bg-fixed ${currentSlide === el.id ? " opacity-100" : " opacity-0"}`}>
-                        <Image src={el.image} alt="sliderImg" fill className="object-cover w-full h-full" />
+                        bg-center ${currentSlide === el.id ? " opacity-100" : " opacity-0"}`}
+                        style={{ backgroundImage: `url(${el.image})` }}>
                         <div className=" text-[1.5rem] px-4 text-white uppercase font-bold md:px-6 md:text-[2rem] lg:px-24 lg:text-[3rem] z-10">
                             {el.title}
                         </div>

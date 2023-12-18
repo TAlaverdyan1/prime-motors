@@ -17,16 +17,23 @@ const Branches = () => {
             {
                 currentBranchesSection?.content.map((el: BranchesSectionItem) => (
                     <div key={el.id} className={` block custom:flex items-center mt-8 ${el.id % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                        <div className="text-center text-[16px] px-4 py-10 custom:w-1/2 md:text-[17px] lg:px-12 xl:px-24">
+                        <div className="text-center px-4 pb-10 custom:w-1/2 md:text-[17px] lg:px-12 xl:px-24">
                             <div className=" text-[20px] font-bold text-red m-3 capitalize">{el.subtitle}</div>
                             {el.description}
                         </div>
-                        <div className="w-full custom:w-1/2 h-[600px] relative"><Image src={el.image} alt="aboutUsSectionImg" fill className=" object-cover" /></div>
+                        <div className="w-full custom:w-1/2 h-[300px] md:h-[550px] relative">
+                            <Image
+                                src={el.image}
+                                alt="branchImg"
+                                fill
+                                className=" object-cover object-center"
+                                sizes="(max-width: 600px) 100vw, 600px" />
+                        </div>
                     </div>
                 ))
             }
         </div>
     )
-}
+};
 
 export { Branches };

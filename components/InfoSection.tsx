@@ -17,8 +17,15 @@ const InfoSection = () => {
             {
                 currentInfoSection.content.map((el: InfoSectionItem) => (
                     <div key={el.id}>
-                        <div className=" text-center text-[16px] px-4 py-10 md:px-6 md:text-[17px] lg:px-12 xl:px-24">{el.description}</div>
-                        <div className=" w-[100%] h-[600px] relative "><Image src={el.image} alt="infoSectionImg" fill className="object-cover w-full h-full" /></div>
+                        <div className=" text-center text-[16px] py-10 md:px-6 md:text-[17px] lg:px-12 xl:px-24">{el.description}</div>
+                        <div className="w-full h-[350px] sm:h-[450px] md:h-[700px] relative">
+                            <Image
+                                src={el.image}
+                                alt="branchImg"
+                                fill
+                                className=" object-cover object-center"
+                                sizes="(max-width: 600px) 100vw, 600px" />
+                        </div>
                     </div>
                 ))
             }

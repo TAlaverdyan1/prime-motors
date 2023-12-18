@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PromotionPage() {
     return (
-        <div className=" flex-col items-center justify-center text-center pt-20">
+        <div className=" flex flex-col items-center justify-center text-center pt-20">
             <Promotion />
         </div>
     )
