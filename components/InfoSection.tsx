@@ -13,18 +13,21 @@ const InfoSection = () => {
 
     return (
         <div className=" mt-20">
-            <div className=" text-red font-bold text-[30px] uppercase text-center px-4">{currentInfoSection?.title}</div>
+            <div className=" text-red text-center font-bold text-[30px] uppercase px-4">{currentInfoSection?.title}</div>
             {
                 currentInfoSection.content.map((el: InfoSectionItem) => (
                     <div key={el.id}>
                         <div className=" text-center text-[16px] py-10 md:px-6 md:text-[17px] lg:px-12 xl:px-24">{el.description}</div>
-                        <div className="w-full h-[350px] sm:h-[450px] md:h-[700px] relative">
-                            <Image
-                                src={el.image}
-                                alt="branchImg"
-                                fill
-                                className=" object-cover object-center"
-                                sizes="(max-width: 600px) 100vw, 600px" />
+                        <div className="  h-[350px] sm:h-[450px] md:h-[700px] w-full md:w-[1100px] relative mx-auto ">
+                            <div className=" flex items-center justify-center">
+                                <Image
+                                    src={el.image}
+                                    alt="branchImg"
+                                    fill
+                                    className=" object-cover object-center"
+                                    sizes="(max-width: 2000px) 100vw, 2000px" />
+                            </div>
+
                         </div>
                     </div>
                 ))
