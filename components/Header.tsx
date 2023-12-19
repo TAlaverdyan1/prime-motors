@@ -66,7 +66,7 @@ const Header = () => {
                                                     <Link
                                                         key={subtitle.id}
                                                         href={subtitle.route}
-                                                        className=" block py-2 px-4 uppercase text-[17px] text-[#dbcdcd] hover:text-white hover:duration-700"
+                                                        className=" block py-2 px-4 custom:px-0 uppercase text-[17px] text-[#dbcdcd] hover:text-white hover:duration-700"
                                                     >
                                                         {subtitle.title}
                                                         {index < subtitlesArray.length - 1 && <span className="mx-5 text-white hidden custom:inline">|</span>}
