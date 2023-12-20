@@ -4,6 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useRef, useState, useEffect } from "react";
 import { IoMenu, IoCloseCircle } from "react-icons/io5";
+import { FaAngleDown } from 'react-icons/fa';
 import { useLanguage } from "./SelectLanguage";
 import { navbar } from "@/lib/_data";
 import { NavbarItem, NavbarData } from "@/models/models";
@@ -18,6 +19,7 @@ const Header = () => {
 
     const currentNavbar = navbar[currentLanguage as keyof NavbarData];
 
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const handleClickOutside = (e: any) => {
@@ -25,7 +27,6 @@ const Header = () => {
                     setShowNavBar(false);
                 }
             };
-
             window.addEventListener('click', handleClickOutside);
 
             return () => {
@@ -47,7 +48,7 @@ const Header = () => {
                     <IoMenu onClick={(e: any) => { e.stopPropagation(); setShowNavBar(!showNavBar); }} />
                 </div>
 
-                <div className={`${showNavBar ? "absolute flex flex-col gap-5 top-0 right-0 w-[300px] h-screen py-12 px-5 text-left bg-black text-white z-20"
+                <div className={`${showNavBar ? "absolute flex flex-col gap-5 top-0 right-0 w-[300px] h-screen py-16 px-5 text-left bg-black text-white z-20"
                     : "hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"}`}
                     ref={menuRef}>
                     {
@@ -60,17 +61,19 @@ const Header = () => {
                                     onMouseMove={() => { hasSubtitles ? setVisible(true) : setVisible(false) }}>
                                     <Link
                                         href={el.route}
-                                        className={`text-[18px] font-bold hover:text-red uppercase 
+                                        className={`text-[18px] font-bold hover:text-red uppercase group/subtitles 
                                         ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}
                                         ${showNavBar ? " " : "hover:border-b-2 hover:border-b-red hover:duration-300"}`}
                                         onClick={() => setShowNavBar(false)}>
-                                        {el.title}
+                                        <span className=" inline-flex">{el.title}
+                                            {hasSubtitles && <span className=" flex custom:hidden ml-20 text-white items-center group-hover/subtitles:text-red"><FaAngleDown /></span>}
+                                        </span>
                                     </Link>
                                     {
                                         hasSubtitles && (
                                             <div
                                                 onMouseLeave={() => setVisible(false)}
-                                                className={` ${visible ? " flex duration-1000" : " hidden"}
+                                                className={` ${visible ? " flex" : " hidden"}
                                                     ${showNavBar ? " flex-col bg-red mt-4" : " absolute justify-end w-full top-[95%] right-0 z-10 bg-red shadow-md py-1 px-20 mt-1"}`}>
                                                 {el.subtitles?.map((subtitle: NavbarItem, index: number, subtitlesArray: NavbarItem[]) => (
                                                     <Link
@@ -89,10 +92,9 @@ const Header = () => {
                             )
                         }
                         )}
-
                     {
                         showNavBar ?
-                            <div className=" absolute top-3 right-3 text-[30px] cursor-pointer" onClick={() => setShowNavBar(!showNavBar)}>
+                            <div className=" absolute top-4 right-4 text-[30px] cursor-pointer" onClick={() => setShowNavBar(!showNavBar)}>
                                 <IoCloseCircle />
                             </div> : " "
                     }
