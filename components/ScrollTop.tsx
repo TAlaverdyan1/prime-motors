@@ -19,13 +19,13 @@ const ScrollTop = () => {
 
     const handlerScrollTopFunc = () => {
         if (window.scrollY > 0) {
-            window.scrollTo(0, window.scrollY - 40);
+            window.scrollTo(0, window.scrollY - 60);
             window.requestAnimationFrame(handlerScrollTopFunc);
         }
     }
 
     return showBtn && (
-        <div className=' fixed bottom-10 right-8 z-10 text-[1.6rem] border-2 border-red rounded-full p-4 text-[#c8c6c6] cursor-pointer hover:bg-red hover:duration-500 hover:text-white'
+        <div className=' fixed bottom-10 right-8 z-10 text-[1.6rem] border-2 border-red rounded-full p-4 text-gray-500 cursor-pointer hover:bg-red hover:duration-500 hover:text-white'
             onClick={handlerScrollTopFunc}
         >
             <FaArrowUp />

@@ -29,25 +29,25 @@ export function SelectLanguage() {
 
     return (
         <div
-            className="flex items-center px-[4px] py-[6px] cursor-pointer relative"
+            className="flex items-center px-[4px] py-[6px] cursor-pointer relative group/item"
             onMouseMove={() => setShowSelector(true)}
             onMouseLeave={() => setShowSelector(false)}
         >
-            <div className="capitalize text-[18px] font-bold">{currentLanguage}</div>
+            <div className="uppercase text-[18px] font-bold text-gray-900 group-hover/item:text-red group-hover/item:duration-300">{currentLanguage}</div>
             <div
-                className={`absolute top-[100%] w-[100%] left-0 text-center text-[17px] capitalize bg-gray-200  dropdown ${showSelector ? 'activeSelectLang' : ''
+                className={`absolute top-[100%] w-[100%] left-0 text-center text-[17px] uppercase bg-gray-200  dropdown ${showSelector ? 'activeSelectLang' : ''
                     }`}
                 onClick={onChangeSelect}
             >
-                <div className="flex justify-center items-center px-[3px] py-1 border-b-gray-300 border-b hover:text-red">
+                <div className="flex justify-center items-center px-[3px] py-1 border-b-gray-300 border-b hover:text-red hover:duration-200">
                     en
                 </div>
-                <div className="flex justify-center items-center px-[3px] py-1 border-b-gray-300 border-b hover:text-red">
+                <div className="flex justify-center items-center px-[3px] py-1 border-b-gray-300 border-b hover:text-red hover:duration-200">
                     ru
                 </div>
-                <div className="flex justify-center items-center px-[3px] py-1 hover:text-red">am</div>
+                <div className="flex justify-center items-center px-[3px] py-1 hover:text-red hover:duration-200">am</div>
             </div>
-            <div className="ml-1">
+            <div className="ml-1 text-gray-900 group-hover/item:text-red group-hover/item:duration-300">
                 <FaAngleDown />
             </div>
         </div>

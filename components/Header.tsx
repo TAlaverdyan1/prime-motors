@@ -2,44 +2,44 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { IoMenu, IoCloseCircle } from "react-icons/io5";
 import { useLanguage } from "./SelectLanguage";
 import { navbar } from "@/lib/_data";
 import { NavbarItem, NavbarData } from "@/models/models";
 import { SelectLanguage } from "./SelectLanguage";
 
-
 const Header = () => {
     const pathname = usePathname();
     const currentLanguage = useLanguage();
     const [visible, setVisible] = useState<boolean>(false);
     const [showNavBar, setShowNavBar] = useState<boolean>(false);
+    const menuRef = useRef<HTMLDivElement | null>(null);
 
     const currentNavbar = navbar[currentLanguage as keyof NavbarData];
 
-    // const handleContainerClick = (e:any) => {
-    //     if (showNavBar && !e.target.dataset.navbarContainer) {
-    //         setShowNavBar(false);
-    //     }
-    // };
-
+    window.addEventListener('click', (e: any) => {
+        if (showNavBar && !menuRef.current?.contains(e.target)) {
+            setShowNavBar(false)
+        }
+    })
 
     return (
-        <div className=" flex justify-between text-center items-center fixed w-full px-4 py-2 border-b border-b-red z-20 bg-white md:px-6 lg:px-12 xl:px-24">
+        <div className="flex justify-between text-center items-center fixed w-full px-4 py-2 border-b border-b-red z-20 shadow-xl bg-white md:px-6 lg:px-12 xl:px-24">
 
             <Link href={"/"}>
                 <Image src="/images/logo.png" alt="logo" width={100} height={100} />
             </Link>
 
-            <div className=" flex flex-row-reverse justify-between items-center text-center custom:flex-row">
+            <div className="flex flex-row-reverse justify-between items-center text-center custom:flex-row">
 
                 <div className={`flex text-[30px] text-red cursor-pointer ml-3 custom:hidden`}>
-                    <IoMenu onClick={() => setShowNavBar(!showNavBar)} />
+                    <IoMenu onClick={(e: any) => { e.stopPropagation(); setShowNavBar(!showNavBar); }} />
                 </div>
 
-                <div className={`${showNavBar ? " navbar-container absolute flex flex-col gap-5 top-0 right-0 w-[300px] h-screen py-12 px-5 text-left bg-black text-white z-20"
-                    : "hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"}`}>
+                <div className={`${showNavBar ? "absolute flex flex-col gap-5 top-0 right-0 w-[300px] h-screen py-12 px-5 text-left bg-black text-white z-20"
+                    : "hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"}`}
+                    ref={menuRef}>
                     {
                         currentNavbar.map((el: NavbarItem) => {
                             const isActive = pathname === el.route;
@@ -50,8 +50,8 @@ const Header = () => {
                                     onMouseMove={() => { hasSubtitles ? setVisible(true) : setVisible(false) }}>
                                     <Link
                                         href={el.route}
-                                        className={` text-[18px] font-bold hover:text-red uppercase 
-                                        ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''} 
+                                        className={`text-[18px] font-bold hover:text-red uppercase 
+                                        ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}
                                         ${showNavBar ? " " : "hover:border-b-2 hover:border-b-red hover:duration-300"}`}
                                         onClick={() => setShowNavBar(false)}>
                                         {el.title}
@@ -81,7 +81,9 @@ const Header = () => {
 
                     {
                         showNavBar ?
-                            <div className=" absolute top-3 right-3 text-[30px] cursor-pointer" onClick={() => setShowNavBar(!showNavBar)}> <IoCloseCircle /> </div> : " "
+                            <div className=" absolute top-3 right-3 text-[30px] cursor-pointer" onClick={() => setShowNavBar(!showNavBar)}>
+                                <IoCloseCircle />
+                            </div> : " "
                     }
                 </div>
                 <SelectLanguage />

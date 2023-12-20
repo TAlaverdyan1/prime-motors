@@ -6,10 +6,12 @@
 :root {
     --red: #FF0000;
     --darkRed: #8b0000;
+    --darkGray: #444;
 }
 
 .dropdown {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s ease;
 }
 
 .activeSelectLang {
@@ -136,7 +138,8 @@
 
 @media (max-width: 420px) {
     .Slider .slide .title {
-        font-size: 1.9rem;
+        font-size: 1.3rem;
+        padding: 0 4px;
     }
 
     .Slider .btn-slide {
@@ -164,4 +167,12 @@
 
 .btn:hover {
     background-color: var(--darkRed);
+}
+
+
+@media (max-width: 660px) {
+    .btn {
+        padding: 12px 25px;
+        font-size: .8rem;
+    }
 }
