@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { IoMenu, IoCloseCircle } from "react-icons/io5";
 import { useLanguage } from "./SelectLanguage";
 import { navbar } from "@/lib/_data";
@@ -18,11 +18,21 @@ const Header = () => {
 
     const currentNavbar = navbar[currentLanguage as keyof NavbarData];
 
-    window.addEventListener('click', (e: any) => {
-        if (showNavBar && !menuRef.current?.contains(e.target)) {
-            setShowNavBar(false)
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const handleClickOutside = (e: any) => {
+                if (showNavBar && !menuRef.current?.contains(e.target)) {
+                    setShowNavBar(false);
+                }
+            };
+
+            window.addEventListener('click', handleClickOutside);
+
+            return () => {
+                window.removeEventListener('click', handleClickOutside);
+            };
         }
-    })
+    }, [showNavBar]);
 
     return (
         <div className="flex justify-between text-center items-center fixed w-full px-4 py-2 border-b border-b-red z-20 shadow-xl bg-white md:px-6 lg:px-12 xl:px-24">
@@ -66,6 +76,7 @@ const Header = () => {
                                                     <Link
                                                         key={subtitle.id}
                                                         href={subtitle.route}
+                                                        onClick={() => setShowNavBar(false)}
                                                         className=" block py-2 px-4 custom:px-0 uppercase text-[17px] text-[#dbcdcd] hover:text-white hover:duration-700"
                                                     >
                                                         {subtitle.title}
