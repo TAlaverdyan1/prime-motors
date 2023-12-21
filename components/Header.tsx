@@ -35,6 +35,10 @@ const Header = () => {
         }
     }, [showNavBar]);
 
+    const isCustomMedia = () => {
+        return typeof window !== 'undefined' && window.innerWidth > 1110;
+    };
+
     return (
         <div className="flex justify-between text-center items-center fixed w-full px-4 py-2 border-b border-b-red z-20 shadow-xl bg-white md:px-6 lg:px-12 xl:px-24">
 
@@ -58,21 +62,31 @@ const Header = () => {
                             return (
                                 <div
                                     key={el.id}
-                                    onMouseMove={() => { hasSubtitles ? setVisible(true) : setVisible(false) }}>
-                                    <Link
-                                        href={el.route}
-                                        className={`text-[18px] font-bold hover:text-red uppercase group/subtitles 
-                                        ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}
-                                        ${showNavBar ? " " : "hover:border-b-2 hover:border-b-red hover:duration-300"}`}
-                                        onClick={() => setShowNavBar(false)}>
-                                        <span className=" inline-flex">{el.title}
-                                            {hasSubtitles && <span className=" flex custom:hidden ml-20 text-white items-center group-hover/subtitles:text-red"><FaAngleDown /></span>}
-                                        </span>
-                                    </Link>
+                                    onMouseMove={() => { isCustomMedia() && (hasSubtitles ? setVisible(true) : setVisible(false)); }}
+                                    onClick={() => { !isCustomMedia() && (hasSubtitles && setVisible(!visible)) }}>
+                                    {hasSubtitles ? (
+                                        <div
+                                            className={`text-[18px] font-bold hover:text-red uppercase cursor-pointer group/subtitles 
+                                            ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}`}>
+                                            <span className={` ${showNavBar ? "flex justify-between " : "hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
+                                                {hasSubtitles && <span className=" flex custom:hidden text-white items-center group-hover/subtitles:text-red"><FaAngleDown /></span>}
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <Link
+                                            href={el.route}
+                                            className={`text-[18px] font-bold hover:text-red uppercase group/subtitles 
+                                            ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}`}
+                                            onClick={() => setShowNavBar(false)}>
+                                            <span className={` ${showNavBar ? "flex justify-between " : "hover:border-b-2 hover:border-b-red hover:duration-300"}`}>
+                                                {el.title}
+                                            </span>
+                                        </Link>
+                                    )}
                                     {
                                         hasSubtitles && (
                                             <div
-                                                onMouseLeave={() => setVisible(false)}
+                                                onMouseLeave={() => { isCustomMedia() && setVisible(false); }}
                                                 className={` ${visible ? " flex" : " hidden"}
                                                     ${showNavBar ? " flex-col bg-red mt-4" : " absolute justify-end w-full top-[95%] right-0 z-10 bg-red shadow-md py-1 px-20 mt-1"}`}>
                                                 {el.subtitles?.map((subtitle: NavbarItem, index: number, subtitlesArray: NavbarItem[]) => (
