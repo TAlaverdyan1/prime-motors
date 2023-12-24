@@ -35,7 +35,7 @@ export function SelectLanguage() {
         >
             <div className="uppercase text-[18px] font-bold text-gray-900 group-hover/item:text-red group-hover/item:duration-300">{currentLanguage}</div>
             <div
-                className={`absolute top-[100%] w-[100%] left-0 text-center text-[17px] uppercase bg-gray-200  dropdown ${showSelector ? 'activeSelectLang' : ''
+                className={`absolute top-[100%] w-[100%] left-0 text-center text-[17px] uppercase bg-gray-200 dropdown ${showSelector ? 'activeDropdown' : ''
                     }`}
                 onClick={onChangeSelect}
             >

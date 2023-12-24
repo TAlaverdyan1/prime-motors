@@ -15,8 +15,13 @@
 }
 
 
-.activeSelectLang {
+.activeDropdown {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hideDropdown {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: max-height 0.3s ease, opacity 0.3s ease 0.3s;
 }
 
 
