@@ -14,6 +14,7 @@ const Header = () => {
     const pathname = usePathname();
     const currentLanguage = useLanguage();
     const [subTitleVisible, setSubTitleVisible] = useState<boolean>(false);
+    const [desktopMedia, setDesktopMedia] = useState<boolean>(true);
     const [showNavBar, setShowNavBar] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -22,27 +23,30 @@ const Header = () => {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
+            const handleResize = () => {
+                if (window.innerWidth > 1110) {
+                    setDesktopMedia(true);
+                } else {
+                    setDesktopMedia(false);
+                }
+            };
+
             const handleClickOutside = (e: any) => {
                 if (showNavBar && !menuRef.current?.contains(e.target)) {
                     setShowNavBar(false);
                     setSubTitleVisible(false);
                 }
             };
+            window.addEventListener('resize', handleResize);
             window.addEventListener('click', handleClickOutside);
 
             return () => {
                 window.removeEventListener('click', handleClickOutside);
+                window.removeEventListener('resize', handleResize);
             };
         }
-    }, [showNavBar]);
+    }, [desktopMedia, showNavBar]);
 
-    const isCustomMedia = () => {
-        return typeof window !== 'undefined' && window.innerWidth > 1110;
-    };
-
-
-    
-    
 
     return (
         <div className="flex justify-between text-center items-center fixed w-full px-4 py-2 border-b border-b-red z-20 shadow-xl bg-white md:px-6 lg:px-12 xl:px-24">
@@ -57,12 +61,8 @@ const Header = () => {
                     <IoMenu onClick={(e: any) => { e.stopPropagation(); setShowNavBar(!showNavBar); }} />
                 </div>
 
-                {/*  <div className={`${showNavBar ? "absolute flex flex-col gap-5 top-0 right-0 w-[300px] h-screen py-16 px-5 text-left bg-black text-white z-20"
-                    : "hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"}`}
-                    ref={menuRef}> */}
-
-                <div className={`${isCustomMedia() ? " justify-center items-center text-center gap-3 mr-3 flex flex-row" 
-                : `transform transition-transform duration-700 ease-in-out ${showNavBar ? 'translate-x-0' : 'translate-x-full'} w-[300px] absolute flex flex-col gap-3 top-0 right-0 h-screen py-16 px-5 text-left bg-black text-white z-20 custom:hidden`}`}
+                <div className={`${desktopMedia ? " hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"
+                    : `transform transition-transform duration-700 ease-in-out ${showNavBar ? 'translate-x-0' : 'translate-x-full'} w-[300px] absolute flex flex-col gap-3 top-0 right-0 h-screen py-16 px-5 text-left bg-black text-white z-20 custom:hidden`}`}
                     ref={menuRef}>
                     {
                         currentNavbar.map((el: NavbarItem) => {
@@ -71,13 +71,13 @@ const Header = () => {
                             return (
                                 <div
                                     key={el.id}
-                                    onMouseMove={() => { isCustomMedia() && (hasSubtitles ? setSubTitleVisible(true) : setSubTitleVisible(false)); }}
-                                    onClick={(e) => { e.stopPropagation(); !isCustomMedia() && (hasSubtitles && setSubTitleVisible(!subTitleVisible)) }}>
+                                    onMouseMove={() => { desktopMedia && (hasSubtitles ? setSubTitleVisible(true) : setSubTitleVisible(false)); }}
+                                    onClick={(e) => { e.stopPropagation(); !desktopMedia && (hasSubtitles && setSubTitleVisible(!subTitleVisible)) }}>
                                     {hasSubtitles ? (
                                         <div
                                             className={` text-[18px] font-bold custom:hover:text-red uppercase cursor-pointer group/subtitles  
                                             ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}`}>
-                                            <span className={` ${showNavBar ? "flex justify-between" : "hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
+                                            <span className={`flex justify-between ${showNavBar && !desktopMedia ? "" : " hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
                                                 {hasSubtitles && !subTitleVisible && <span className=" flex custom:hidden text-white items-center group-hover/subtitles:text-red">
                                                     <FaAngleDown />
                                                 </span>}
@@ -102,7 +102,7 @@ const Header = () => {
                                     {
                                         hasSubtitles && (
                                             <div
-                                                onMouseLeave={() => { isCustomMedia() && setSubTitleVisible(false); }}
+                                                onMouseLeave={() => { desktopMedia && setSubTitleVisible(false); }}
                                                 className={` dropdown max-h-0 ${subTitleVisible ? " flex activeDropdown max-h-[500px]" : "hideDropdown"}
                                                     ${showNavBar ? " flex-col bg-red border-b-[1px] border-b-white" : " absolute justify-end w-full top-[95%] right-0 z-10 bg-red shadow-md py-1 px-4 md:px-6 lg:px-12 xl:px-24 mt-1"}`}>
                                                 {el.subtitles?.map((subtitle: NavbarItem, index: number, subtitlesArray: NavbarItem[]) => (
