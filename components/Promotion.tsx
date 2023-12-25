@@ -16,11 +16,11 @@ const Promotion = () => {
     return (
         <div className=" my-20">
             <div className=" text-red font-bold text-[30px] uppercase text-center px-4">{currentPromotionSection.title}</div>
-            <div className={`mt-8 gap-6 py-8 grid px-8 lg:px-12 ${gridColumns}`}>
+            <div className={`mt-8 gap-6 py-8 grid px-8 lg:px-12  ${gridColumns}`}>
                 {
                     currentPromotionSection?.content.map((el: PromotionSectionItem) => (
                         <div key={el.id}>
-                            <div className=" flex flex-col justify-center items-center border-2 border-red rounded py-6">
+                            <div className=" flex flex-col justify-center items-center border-2 border-red rounded py-6 hover:scale-105 duration-300">
                                 <Image
                                     src={el.image}
                                     width={228}
