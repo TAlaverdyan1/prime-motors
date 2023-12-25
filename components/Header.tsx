@@ -45,7 +45,7 @@ const Header = () => {
                 window.removeEventListener('resize', handleResize);
             };
         }
-    }, [desktopMedia, showNavBar]);
+    }, [showNavBar, desktopMedia]);
 
 
     return (
@@ -58,11 +58,11 @@ const Header = () => {
             <div className="flex flex-row-reverse justify-between items-center text-center custom:flex-row">
 
                 <div className={`flex text-[30px] text-red cursor-pointer ml-3 custom:hidden hover:text-darkRed`}>
-                    <IoMenu onClick={(e: any) => { e.stopPropagation(); setShowNavBar(!showNavBar); }} />
+                    <IoMenu onClick={(e: any) => { e.stopPropagation(); setShowNavBar(true); }} />
                 </div>
 
-                <div className={`${desktopMedia ? " hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"
-                    : `transform transition-transform duration-700 ease-in-out ${showNavBar ? 'translate-x-0' : 'translate-x-full'} w-[300px] absolute flex flex-col gap-3 top-0 right-0 h-screen py-16 px-5 text-left bg-black text-white z-20 custom:hidden`}`}
+                <div className={`${desktopMedia && !showNavBar ? " hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"
+                    : ` ${showNavBar ? 'translate-x-0' : 'translate-x-full'} transform transition-transform duration-700 ease-in-out w-[300px] absolute flex flex-col gap-3 top-0 right-0 h-screen py-16 px-5 text-left bg-black text-white z-20 custom:hidden`}`}
                     ref={menuRef}>
                     {
                         currentNavbar.map((el: NavbarItem) => {
@@ -77,11 +77,11 @@ const Header = () => {
                                         <div
                                             className={` text-[18px] font-bold custom:hover:text-red uppercase cursor-pointer group/subtitles  
                                             ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}`}>
-                                            <span className={`flex justify-between ${showNavBar && !desktopMedia ? "" : " hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
-                                                {hasSubtitles && !subTitleVisible && <span className=" flex custom:hidden text-white items-center group-hover/subtitles:text-red">
+                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
+                                                {hasSubtitles && !subTitleVisible && <span className=" flex custom:hidden text-white items-center ">
                                                     <FaAngleDown />
                                                 </span>}
-                                                {hasSubtitles && subTitleVisible && <span className=" flex custom:hidden text-white items-center group-hover/subtitles:text-red">
+                                                {hasSubtitles && subTitleVisible && <span className=" flex custom:hidden text-white items-center">
                                                     <FaAngleUp />
                                                 </span>}
                                             </span>
