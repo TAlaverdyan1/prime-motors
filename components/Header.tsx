@@ -26,10 +26,12 @@ const Header = () => {
             const handleResize = () => {
                 if (window.innerWidth > 1110) {
                     setDesktopMedia(true);
+                    setShowNavBar(false);
                 } else {
                     setDesktopMedia(false);
                 }
             };
+            handleResize();
 
             const handleClickOutside = (e: any) => {
                 if (showNavBar && !menuRef.current?.contains(e.target)) {
@@ -37,6 +39,7 @@ const Header = () => {
                     setSubTitleVisible(false);
                 }
             };
+
             window.addEventListener('resize', handleResize);
             window.addEventListener('click', handleClickOutside);
 
@@ -68,6 +71,7 @@ const Header = () => {
                         currentNavbar.map((el: NavbarItem) => {
                             const isActive = pathname === el.route;
                             const hasSubtitles = el.subtitles && el.subtitles.length > 0;
+
                             return (
                                 <div
                                     key={el.id}
@@ -75,13 +79,13 @@ const Header = () => {
                                     onClick={(e) => { e.stopPropagation(); !desktopMedia && (hasSubtitles && setSubTitleVisible(!subTitleVisible)) }}>
                                     {hasSubtitles ? (
                                         <div
-                                            className={` text-[18px] font-bold custom:hover:text-red uppercase cursor-pointer group/subtitles  
-                                            ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}`}>
-                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
-                                                {hasSubtitles && !subTitleVisible && <span className=" flex custom:hidden text-white items-center ">
+                                            className={` text-[18px] font-bold custom:hover:text-red uppercase cursor-pointer  
+                                            ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? ' inline text-red border-b-2 border-b-red group/subtitles' : ''}`}>
+                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " custom:hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
+                                                {hasSubtitles && !subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white" }`}>
                                                     <FaAngleDown />
                                                 </span>}
-                                                {hasSubtitles && subTitleVisible && <span className=" flex custom:hidden text-white items-center">
+                                                {hasSubtitles && subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white" }`}>
                                                     <FaAngleUp />
                                                 </span>}
                                             </span>
@@ -93,7 +97,7 @@ const Header = () => {
                                             className={`text-[18px] font-bold hover:text-red uppercase group/subtitles 
                                             ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}`}
                                             onClick={() => setShowNavBar(false)}>
-                                            <span className={` ${showNavBar ? "flex justify-between" : "hover:border-b-2 hover:border-b-red hover:duration-300"}`}>
+                                            <span className={` ${showNavBar ? "flex justify-between" : "custom:hover:border-b-2 custom:hover:border-b-red custom:hover:duration-300"}`}>
                                                 {el.title}
                                             </span>
                                             <div className="flex custom:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
@@ -109,7 +113,7 @@ const Header = () => {
                                                     <Link
                                                         key={subtitle.id}
                                                         href={subtitle.route}
-                                                        onClick={() => setShowNavBar(false)}
+                                                        onClick={() => { setShowNavBar(false) }}
                                                         className=" block py-2 px-4 custom:px-0 uppercase text-[17px] text-white hover:duration-700 custom:text-[#dbcdcd] custom:hover:text-white"
                                                     >
                                                         {subtitle.title}

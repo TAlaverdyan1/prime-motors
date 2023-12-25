@@ -14,7 +14,7 @@ const Footer = () => {
 
 
     return (
-        <div className=" flex flex-col justify-between items-center px-4 py-6 gap-2 bg-black md:flex-row md:px-6 lg:px-12 xl:px-24">
+        <div className=" flex flex-col justify-between items-center px-4 py-6 gap-2 border-t border-t-red bg-black md:flex-row md:px-6 lg:px-12 xl:px-24">
             <Image src="/images/logo.png" alt="logo" width={100} height={100} />
             <div className="flex-col justify-center text-center text-white text-[17px]">
                 {
