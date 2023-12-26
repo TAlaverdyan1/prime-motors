@@ -9,6 +9,7 @@ import { useLanguage } from "./SelectLanguage";
 import { navbar } from "@/lib/_data";
 import { NavbarItem, NavbarData } from "@/models/models";
 import { SelectLanguage } from "./SelectLanguage";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
     const pathname = usePathname();
@@ -80,12 +81,12 @@ const Header = () => {
                                     {hasSubtitles ? (
                                         <div
                                             className={` text-[18px] font-bold custom:hover:text-red uppercase cursor-pointer  
-                                            ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? ' inline text-red border-b-2 border-b-red group/subtitles' : ''}`}>
-                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " custom:hover:border-b-2 hover:border-b-red hover:duration-300"}`}>{el.title}
-                                                {hasSubtitles && !subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white" }`}>
+                                            ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? ' inline text-red custom:border-b-2 custom:border-b-red group/subtitles' : ''}`}>
+                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " custom:hover:border-b-2 custom:hover:border-b-red hover:duration-300"}`}>{el.title}
+                                                {hasSubtitles && !subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
                                                     <FaAngleDown />
                                                 </span>}
-                                                {hasSubtitles && subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white" }`}>
+                                                {hasSubtitles && subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
                                                     <FaAngleUp />
                                                 </span>}
                                             </span>
@@ -95,7 +96,7 @@ const Header = () => {
                                         <Link
                                             href={el.route}
                                             className={`text-[18px] font-bold hover:text-red uppercase group/subtitles 
-                                            ${(isActive && el.route != "/") ? 'text-red border-b-2 border-b-red' : ''}`}
+                                            ${(isActive && el.route != "/") ? 'text-red custom:border-b-2 custom:border-b-red' : ''}`}
                                             onClick={() => setShowNavBar(false)}>
                                             <span className={` ${showNavBar ? "flex justify-between" : "custom:hover:border-b-2 custom:hover:border-b-red custom:hover:duration-300"}`}>
                                                 {el.title}
