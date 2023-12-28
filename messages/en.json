@@ -1,0 +1,26 @@
+{
+  "about-us": {
+    "title": "ABOUT"
+  },
+  "blog": {
+    "title": "BLOG"
+  },
+  "branches": {
+    "title": "BRANCHES"
+  },
+  "contact-us": {
+    "title": "CONTACT US"
+  },
+  "our-mision-and-vision": {
+    "title": "OUR MISION AND VISION"
+  },
+  "partners": {
+    "title": "PARTNERS"
+  },
+  "promotion": {
+    "title": "PROMOTION"
+  },
+  "services": {
+    "title": "SERVICES"
+  }
+}

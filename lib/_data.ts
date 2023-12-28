@@ -4,147 +4,147 @@ export const navbar = {
         {
             id: 1,
             title: "Company",
-            route: "/",
+            route: "/en",
             subtitles: [
                 {
                     id: 11,
                     title: "About Us",
-                    route: "/about-us",
+                    route: "/en/about-us",
                 },
                 {
                     id: 12,
                     title: "Our Mission and Vision",
-                    route: "/our-mission-and-vision",
+                    route: "/en/our-mission-and-vision",
                 },
                 {
                     id: 13,
                     title: "Services",
-                    route: "/services",
+                    route: "/en/services",
                 },
             ],
         },
         {
             id: 2,
             title: "Partners",
-            route: "/partners",
+            route: "/en/partners",
         },
         {
             id: 3,
             title: "Branches",
-            route: "/branches",
+            route: "/en/branches",
         },
         {
             id: 4,
             title: "Blog",
-            route: "/blog",
+            route: "/en/blog",
         },
         {
             id: 5,
             title: "Promotion",
-            route: "/promotion",
+            route: "/en/promotion",
         },
         {
             id: 6,
             title: "Contact Us",
-            route: "/contact-us",
+            route: "en/contact-us",
         },
     ],
     ru: [
         {
             id: 1,
             title: "Компания",
-            route: "/",
+            route: "/ru",
             subtitles: [
                 {
                     id: 11,
                     title: "О нас",
-                    route: "/about-us",
+                    route: "/ru/about-us",
                 },
                 {
                     id: 12,
                     title: "Наша миссия и видение",
-                    route: "/our-mission-and-vision",
+                    route: "/ru/our-mission-and-vision",
                 },
                 {
                     id: 13,
                     title: "Услуги",
-                    route: "/services",
+                    route: "/ru/services",
                 },
             ],
         },
         {
             id: 2,
             title: "Партнеры",
-            route: "/partners",
+            route: "/ru/partners",
         },
         {
             id: 3,
             title: "Ветви",
-            route: "/branches",
+            route: "/ru/branches",
         },
         {
             id: 4,
             title: "Блог",
-            route: "/blog",
+            route: "/ru/blog",
         },
         {
             id: 5,
             title: "Повышение",
-            route: "/promotion",
+            route: "/ru/promotion",
         },
         {
             id: 6,
             title: "Связаться с нами",
-            route: "/contact-us",
+            route: "/ru/contact-us",
         },
     ],
     am: [
         {
             id: 1,
             title: "Ընկերություն",
-            route: "/",
+            route: "/am",
             subtitles: [
                 {
                     id: 11,
                     title: "Մեր մասին",
-                    route: "/about-us",
+                    route: "/am/about-us",
                 },
                 {
                     id: 12,
                     title: "Մեր առաքելությունն ու տեսլականը",
-                    route: "/our-mission-and-vision",
+                    route: "/am/our-mission-and-vision",
                 },
                 {
                     id: 13,
                     title: "Ծառայություններ",
-                    route: "/services",
+                    route: "/am/services",
                 },
             ],
         },
         {
             id: 2,
             title: "Գործընկերներ",
-            route: "/partners",
+            route: "/am/partners",
         },
         {
             id: 3,
             title: "Մասնաճյուղեր",
-            route: "/branches",
+            route: "/am/branches",
         },
         {
             id: 4,
             title: "Բլոգ",
-            route: "/blog",
+            route: "/am/blog",
         },
         {
             id: 5,
             title: "Առաջխաղացում",
-            route: "/promotion",
+            route: "/am/promotion",
         },
         {
             id: 6,
             title: "Կապ",
-            route: "/contact-us",
+            route: "/am/contact-us",
         },
     ]
 };
@@ -169,7 +169,7 @@ export const footer = {
             title: "Հետեւեք մեզ"
         }
     ]
-}
+};
 
 export const socialLinks = {
     facebook: [{
@@ -181,7 +181,7 @@ export const socialLinks = {
             route: "https://www.instagram.com/prime_motors_llc/",
         },
     ]
-}
+};
 
 export const slider = {
     en: [
@@ -190,42 +190,42 @@ export const slider = {
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             btn_text: "Lorem Ipsum",
             image: "/images/slides/slide1.jpg",
-            route: "/",
+            route: "/en/about-us",
         },
         {
             id: 2,
             title: "In porttitor metus nec orci pellentesque vehicula",
             btn_text: "In porttitor",
             image: "/images/slides/slide2.jpg",
-            route: "/partners",
+            route: "/en/partners",
         },
         {
             id: 3,
             title: "Vivamus molestie eu leo id placerat",
             btn_text: "Vivamus molestie",
             image: "/images/slides/slide3.jpg",
-            route: "/branches",
+            route: "/en/branches",
         },
         {
             id: 4,
             title: "In porttitor metus nec orci pellentesque vehicula",
             btn_text: "In porttitor",
             image: "/images/slides/slide4.jpg",
-            route: "/blog",
+            route: "/en/blog",
         },
         {
             id: 5,
             title: "Vivamus molestie eu leo id placerat",
             btn_text: "Vivamus molestie",
             image: "/images/slides/slide1.jpg",
-            route: "/promotion",
+            route: "/en/promotion",
         },
         {
             id: 6,
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             btn_text: "Lorem Ipsum",
             image: "/images/slides/slide2.jpg",
-            route: "/contact-us",
+            route: "/en/contact-us",
         },
     ],
     ru: [
@@ -234,42 +234,42 @@ export const slider = {
             title: "Клиент очень важен, за клиентом последует клиент",
             btn_text: "Клиент важен",
             image: "/images/slides/slide1.jpg",
-            route: "/",
+            route: "/ru/about-us",
         },
         {
             id: 2,
             title: "В авиакомпании не боятся медицинских дизельных автомобилей",
             btn_text: "В авиакомпании",
             image: "/images/slides/slide2.jpg",
-            route: "/partners",
+            route: "/ru/partners",
         },
         {
             id: 3,
             title: "Живой футбольный сотрудник вложит их",
             btn_text: "Живой футбольный",
             image: "/images/slides/slide3.jpg",
-            route: "/branches",
+            route: "/ru/branches",
         },
         {
             id: 4,
             title: "Клиент очень важен, за клиентом последует клиент",
             btn_text: "Клиент важен",
             image: "/images/slides/slide4.jpg",
-            route: "/blog",
+            route: "/ru/blog",
         },
         {
             id: 5,
             title: "В авиакомпании не боятся медицинских дизельных автомобилей",
             btn_text: "В авиакомпании",
             image: "/images/slides/slide1.jpg",
-            route: "/promotion",
+            route: "/ru/promotion",
         },
         {
             id: 6,
             title: "Живой футбольный сотрудник вложит их",
             btn_text: "Живой футбольный",
             image: "/images/slides/slide2.jpg",
-            route: "/contact-us",
+            route: "/ru/contact-us",
         },
     ],
     am: [
@@ -278,46 +278,46 @@ export const slider = {
             title: "Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը",
             btn_text: "Հաճախորդը կարևոր է",
             image: "/images/slides/slide1.jpg",
-            route: "/",
+            route: "/am/about-us",
         },
         {
             id: 2,
             title: "Ավիաընկերությունում բժշկական դիզելային փոխադրամիջոցներից վախ չկա",
             btn_text: "Ավիաընկերությունում",
             image: "/images/slides/slide2.jpg",
-            route: "/partners",
+            route: "/am/partners",
         },
         {
             id: 3,
             title: "Կենդանի ֆուտբոլի աշխատակիցը դա կներդնի",
             btn_text: "Կենդանի ֆուտբոլ",
             image: "/images/slides/slide3.jpg",
-            route: "/branches",
+            route: "/am/branches",
         },
         {
             id: 4,
             title: "Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը",
             btn_text: "Հաճախորդը կարևոր է",
             image: "/images/slides/slide4.jpg",
-            route: "/blog",
+            route: "/am/blog",
         },
         {
             id: 5,
             title: "Ավիաընկերությունում բժշկական դիզելային փոխադրամիջոցներից վախ չկա",
             btn_text: "Ավիաընկերությունում",
             image: "/images/slides/slide1.jpg",
-            route: "/promotion",
+            route: "/am/promotion",
         },
         {
             id: 6,
             title: "Կենդանի ֆուտբոլի աշխատակիցը դա կներդնի",
             btn_text: "Կենդանի ֆուտբոլ",
             image: "/images/slides/slide2.jpg",
-            route: "/contact-us",
+            route: "/am/contact-us",
         },
     ]
 
-}
+};
 
 export const homepageInfoSection = {
     en: {
@@ -488,7 +488,7 @@ export const homepageInfoSection = {
             },
         ],
     },
-}
+};
 
 export const aboutUsSection = {
     en: {
@@ -581,7 +581,7 @@ export const aboutUsSection = {
             },
         ],
     },
-}
+};
 
 
 export const ourMissionSection = {
@@ -626,7 +626,7 @@ export const ourMissionSection = {
         ],
     },
 
-}
+};
 
 
 export const servicesSection = {
@@ -813,8 +813,7 @@ export const servicesSection = {
             },
         ],
     },
-}
-
+};
 
 
 export const partnersSection = {
@@ -825,7 +824,7 @@ export const partnersSection = {
                 id: 1,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -836,7 +835,7 @@ export const partnersSection = {
                 id: 2,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -847,7 +846,7 @@ export const partnersSection = {
                 id: 3,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -858,7 +857,7 @@ export const partnersSection = {
                 id: 4,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -869,7 +868,7 @@ export const partnersSection = {
                 id: 5,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -880,7 +879,7 @@ export const partnersSection = {
                 id: 6,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -891,7 +890,7 @@ export const partnersSection = {
                 id: 7,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -902,7 +901,7 @@ export const partnersSection = {
                 id: 8,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -913,7 +912,7 @@ export const partnersSection = {
                 id: 9,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/en",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -929,7 +928,7 @@ export const partnersSection = {
                 id: 1,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -940,7 +939,7 @@ export const partnersSection = {
                 id: 2,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -951,7 +950,7 @@ export const partnersSection = {
                 id: 3,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -962,7 +961,7 @@ export const partnersSection = {
                 id: 4,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -973,7 +972,7 @@ export const partnersSection = {
                 id: 5,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -984,7 +983,7 @@ export const partnersSection = {
                 id: 6,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -995,7 +994,7 @@ export const partnersSection = {
                 id: 7,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -1006,7 +1005,7 @@ export const partnersSection = {
                 id: 8,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -1017,7 +1016,7 @@ export const partnersSection = {
                 id: 9,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/ru",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -1033,7 +1032,7 @@ export const partnersSection = {
                 id: 1,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1045,7 +1044,7 @@ export const partnersSection = {
                 id: 2,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1057,7 +1056,7 @@ export const partnersSection = {
                 id: 3,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1069,7 +1068,7 @@ export const partnersSection = {
                 id: 4,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1081,7 +1080,7 @@ export const partnersSection = {
                 id: 5,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1093,7 +1092,7 @@ export const partnersSection = {
                 id: 6,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1105,7 +1104,7 @@ export const partnersSection = {
                 id: 7,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner1.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1117,7 +1116,7 @@ export const partnersSection = {
                 id: 8,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1129,7 +1128,7 @@ export const partnersSection = {
                 id: 9,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "/am",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1139,7 +1138,7 @@ export const partnersSection = {
             },
         ],
     },
-}
+};
 
 
 export const branchesSection = {
@@ -1354,8 +1353,7 @@ export const blogSection = {
             },
         ],
     },
-}
-
+};
 
 
 export const promotionSection = {
@@ -1422,7 +1420,7 @@ export const promotionSection = {
             },
         ],
     },
-}
+};
 
 
 export const contactUsSection = {
@@ -1472,4 +1470,4 @@ export const contactUsSection = {
             },
         ],
     },
-}
+};

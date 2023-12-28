@@ -19,9 +19,9 @@ export type FooterItem = {
 };
 
 export type FooterData = {
-    en: NavbarItem[];
-    ru: NavbarItem[];
-    am: NavbarItem[];
+    en: FooterItem[];
+    ru: FooterItem[];
+    am: FooterItem[];
 };
 
 export type SocialLinkItem = {
@@ -50,169 +50,166 @@ export type SliderData = {
 };
 
 
-export type InfoSectionItem = {
+export type InfoSectionContent = {
     id: number;
     image: string;
     description: string;
-}
+};
 
-export type InfoSection = {
+export type InfoSectionItem = {
     title: string;
     btn_text: string;
-    content: InfoSectionItem[];
-}
+    content: InfoSectionContent[];
+};
 
 
 export type HomepageInfoSection = {
-    en: InfoSection;
-    ru: InfoSection;
-    am: InfoSection;
+    en: InfoSectionItem;
+    ru: InfoSectionItem;
+    am: InfoSectionItem;
+};
+
+export type AboutUsSectionContent = {
+    id: number;
+    image: string;
+    description: string;
 };
 
 export type AboutUsSectionItem = {
-    id: number;
-    image: string;
-    description: string;
-}
-
-export type AboutUsSection = {
     title: string;
-    content: InfoSectionItem[];
-}
+    content: AboutUsSectionContent[];
+};
 
 
 export type AboutUsInfoSection = {
-    en: AboutUsSection;
-    ru: AboutUsSection;
-    am: AboutUsSection;
+    en: AboutUsSectionItem;
+    ru: AboutUsSectionItem;
+    am: AboutUsSectionItem;
 };
 
 
-
-export type OurMissionSectionItem = {
+export type OurMissionSectionContent = {
     id: number;
     image: string;
     description: string;
-}
+};
 
-export type OurMissionSection = {
+export type OurMissionSectionItem = {
     title: string;
-    content: OurMissionSectionItem[];
-}
-
-
-export type OurMissionInfoSection = {
-    en: OurMissionSection;
-    ru: OurMissionSection;
-    am: OurMissionSection;
+    content: OurMissionSectionContent[];
 };
 
 
-export type ServicesSectionItem = {
+export type OurMissionInfoSection = {
+    en: OurMissionSectionItem;
+    ru: OurMissionSectionItem;
+    am: OurMissionSectionItem;
+};
+
+
+export type ServicesSectionContent = {
     id: number;
     subtitle: string;
     image: string;
     description: string;
-}
+};
 
-export type ServicesSection = {
+export type ServicesSectionItem = {
     title: string;
-    content: InfoSectionItem[];
-}
-
-
-export type ServicesInfoSection = {
-    en: ServicesSection;
-    ru: ServicesSection;
-    am: ServicesSection;
+    content: ServicesSectionContent[];
 };
 
 
-export type PartnersSectionItem = {
+export type ServicesInfoSection = {
+    en: ServicesSectionItem;
+    ru: ServicesSectionItem;
+    am: ServicesSectionItem;
+};
+
+
+export type PartnersSectionContent = {
     id: number;
     subtitle: string;
     image: string;
     link: string;
     btn_text: string;
     description: string;
-}
+};
 
-export type PartnersSection = {
+export type PartnersSectionItem = {
     title: string;
-    content: PartnersSectionItem[];
-}
-
+    content: PartnersSectionContent[];
+};
 
 export type PartnersInfoSection = {
-    en: PartnersSection;
-    ru: PartnersSection;
-    am: PartnersSection;
+    en: PartnersSectionItem;
+    ru: PartnersSectionItem;
+    am: PartnersSectionItem;
 };
 
 
-
-export type BranchesSectionItem = {
+export type BranchesSectionContent = {
     id: number;
     subtitle: string;
     image: string;
     description: string;
-}
+};
 
-export type BranchesSection = {
+export type BranchesSectionItem = {
     title: string;
-    content: PartnersSectionItem[];
-}
-
-
-export type BranchesInfoSection = {
-    en: BranchesSection;
-    ru: BranchesSection;
-    am: BranchesSection;
+    content: BranchesSectionContent[];
 };
 
 
-export type BlogsSectionItem = {
+export type BranchesInfoSection = {
+    en: BranchesSectionItem;
+    ru: BranchesSectionItem;
+    am: BranchesSectionItem;
+};
+
+
+export type BlogsSectionContent = {
     id: number;
     subtitle: string;
     image: string;
     date: string;
     description: string;
-}
+};
 
-export type BlogSection = {
+export type BlogSectionItem = {
     title: string;
-    content: PartnersSectionItem[];
-}
-
-
-export type BlogInfoSection = {
-    en: BlogSection;
-    ru: BlogSection;
-    am: BlogSection;
+    content: BlogsSectionContent[];
 };
 
 
-export type PromotionSectionItem = {
+export type BlogInfoSection = {
+    en: BlogSectionItem;
+    ru: BlogSectionItem;
+    am: BlogSectionItem;
+};
+
+
+export type PromotionSectionContent = {
     id: number;
     subtitle: string;
     image: string;
     description: string;
-}
+};
 
-export type PromotionSection = {
+export type PromotionSectionItem = {
     title: string;
-    content: PromotionSectionItem[];
-}
-
-
-export type PromotionInfoSection = {
-    en: PromotionSection;
-    ru: PromotionSection;
-    am: PromotionSection;
+    content: PromotionSectionContent[];
 };
 
 
-export type ContactUsSectionItem = {
+export type PromotionInfoSection = {
+    en: PromotionSectionItem;
+    ru: PromotionSectionItem;
+    am: PromotionSectionItem;
+};
+
+
+export type ContactUsSectionContent = {
     id: number;
     name: string;
     email: string;
@@ -221,16 +218,16 @@ export type ContactUsSectionItem = {
     message_dispatch: string;
     successMsg: string;
     errorMsg: string;
-}
+};
 
-export type ContactUsSection = {
+export type ContactUsSectionItem = {
     title: string;
-    content: ContactUsSectionItem[];
-}
+    content: ContactUsSectionContent[];
+};
 
 
 export type ContactUsInfoSection = {
-    en: ContactUsSection;
-    ru: ContactUsSection;
-    am: ContactUsSection;
+    en: ContactUsSectionItem;
+    ru: ContactUsSectionItem;
+    am: ContactUsSectionItem;
 };

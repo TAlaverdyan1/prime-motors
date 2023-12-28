@@ -1,0 +1,26 @@
+{
+  "about-us": {
+    "title": "ՄԵՐ ՄԱՍԻՆ"
+  },
+  "blog": {
+    "title": "ԲԼՈԳ"
+  },
+  "branches": {
+    "title": "ՄԱՍՆԱՃՅՈՒՂԵՐ"
+  },
+  "contact-us": {
+    "title": "ԿԱՊ"
+  },
+  "our-mision-and-vision": {
+    "title": "ՄԵՐ ԱՌԱՔԵԼՈՒԹՅՈՒՆՆ ՈՒ ՏԵՍԼԱԿԱՆԸ"
+  },
+  "partners": {
+    "title": "ԳՈՐԾԸՆԿԵՐՆԵՐ"
+  },
+  "promotion": {
+    "title": "ԱՌԱՋԽԱՂԱՑՈՒՄ"
+  },
+  "services": {
+    "title": "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ"
+  }
+}
