@@ -12,10 +12,10 @@ const InfoSection = () => {
 
     return (
         <div className="mt-20">
-            <div className="text-red text-center font-bold text-[30px] uppercase px-4">{currentInfoSection?.title}</div>
-            {currentInfoSection.content.map((el: InfoSectionContent) => (
+            <div className="text-[18px] text-red font-bold md:text-[30px] uppercase text-center px-4">{currentInfoSection?.title}</div>
+            {currentInfoSection?.content.map((el: InfoSectionContent) => (
                 <div key={el.id}>
-                    <div className="text-cente text-[16px] py-10 md:text-[17px] px-4 md:px-6 lg:px-12 xl:px-24">{el.description}</div>
+                    <div className="text-cente text-[16px] py-10 px-4 md:px-6 lg:px-12 xl:px-24">{el.description}</div>
                     <div className=" px-4 md:px-6 lg:px-12 xl:px-24 relative">
                         <div className="flex w-full items-center justify-center mx-auto">
                             <Image

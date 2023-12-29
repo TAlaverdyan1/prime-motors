@@ -17,7 +17,7 @@ const Footer = () => {
             <Image src="/images/logo.png" alt="logo" width={100} height={100} />
             <div className="flex-col justify-center text-center text-white text-[17px]">
                 {
-                    currentFooter.map((el: FooterItem) => (
+                    currentFooter?.map((el: FooterItem) => (
                         <div key={el.id}>
                             {el.title}
                         </div>

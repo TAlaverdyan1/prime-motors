@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { slider } from "@/lib/_data";
@@ -56,7 +56,7 @@ const Slider = () => {
     return (
         <div className='Slider'>
             {
-                currentSlider.map((el: SliderItem, index: number) => {
+                currentSlider?.map((el: SliderItem, index: number) => {
                     return (
                         <div
                             key={el.id}
@@ -81,7 +81,7 @@ const Slider = () => {
             </button>
 
             <div className='container-circle'>
-                {slider.en.map((obj: SliderItem, index: number) => (
+                {currentSlider?.map((obj: SliderItem, index: number) => (
                     <div
                         key={obj.id}
                         onClick={() => moveCircle(index + 1)}

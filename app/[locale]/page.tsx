@@ -1,6 +1,6 @@
-import { Slider } from '@/app/[locale]/components/Slider';
-import { InfoSection } from '@/app/[locale]/components/InfoSection';
-import { ScrollTop } from '@/app/[locale]/components/ScrollTop';
+import { Slider } from './components/Slider';
+import { InfoSection } from './components/InfoSection';
+import { ScrollTop } from './components/ScrollTop';
 
 
 export default function Home() {

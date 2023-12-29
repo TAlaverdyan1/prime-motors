@@ -7,7 +7,7 @@ export async function generateMetadata() {
     const t = await getTranslations('about-us');
 
     return {
-        title: t('title') + SITE_SUFFIX,
+        title: (t('title')).toUpperCase() + SITE_SUFFIX,
     };
 }
 
@@ -17,5 +17,5 @@ export default function AboutUsPage() {
         <div className="flex-col items-center justify-center text-center pt-20">
             <AboutUs />
         </div>
-    );
+    )
 }

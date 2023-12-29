@@ -8,7 +8,7 @@ const ContactUs = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [successMsg, setSuccessMsg] = useState<boolean>(false);
     const [errorMsg, setErrorMsg] = useState<boolean>(false);
-    const locale = useLocale()
+    const locale = useLocale();
 
     const currentContactUsSection = (contactUsSection as ContactUsInfoSection)[locale as keyof ContactUsInfoSection];
 
@@ -40,7 +40,7 @@ const ContactUs = () => {
 
     return (
         <div className=" py-8 px-4 max-w-md w-full text-center md:px-6">
-            <div className=" text-red font-bold text-[30px] uppercase text-center px-4 mb-5">{currentContactUsSection?.title}</div>
+            <div className="text-[18px] text-red font-bold md:text-[30px] uppercase text-center px-4 mb-5 ">{currentContactUsSection?.title}</div>
 
             {successMsg && (
                 <div className="text-green-600">{currentContactUsSection?.content[0]?.successMsg}</div>

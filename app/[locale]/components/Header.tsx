@@ -17,6 +17,9 @@ const Header = () => {
     const [desktopMedia, setDesktopMedia] = useState<boolean>(true);
     const [showNavBar, setShowNavBar] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
+    const path = usePathname();
+    const parts = path.split('/');
+
     const currentNavbar = (navbar as NavbarData)[locale as keyof NavbarData];
 
 
@@ -53,21 +56,21 @@ const Header = () => {
     return (
         <div className="flex justify-between text-center items-center fixed w-full px-4 py-2 border-b border-b-red z-20 shadow-xl bg-white md:px-6 lg:px-12 xl:px-24">
 
-            <Link href={"/"}>
+            <Link href={`/${parts[1]}`}>
                 <Image src="/images/logo.png" alt="logo" width={100} height={100} />
             </Link>
 
-            <div className="flex flex-row-reverse justify-between items-center text-center custom:flex-row">
+            <div className="flex flex-row-reverse justify-between items-center text-center mdbl:flex-row">
 
-                <div className={`flex text-[30px] text-red cursor-pointer ml-3 custom:hidden hover:text-darkRed`}>
+                <div className={`flex text-[30px] text-red cursor-pointer ml-3 mdbl:hidden hover:text-darkRed`}>
                     <IoMenu onClick={(e: any) => { e.stopPropagation(); setShowNavBar(true); }} />
                 </div>
 
-                <div className={`${desktopMedia && !showNavBar ? " hidden justify-center items-center text-center gap-3 mr-3 custom:flex custom:flex-row"
-                    : ` ${showNavBar ? 'translate-x-0' : 'translate-x-full'} transform transition-transform duration-700 ease-in-out w-[300px] absolute flex flex-col gap-3 top-0 right-0 h-screen py-16 px-5 text-left bg-black text-white z-20 custom:hidden`}`}
+                <div className={`${desktopMedia && !showNavBar ? " hidden justify-center items-center text-center gap-3 mr-3 mdbl:flex mdbl:flex-row"
+                    : ` ${showNavBar ? 'translate-x-0' : 'translate-x-full'} transform transition-transform duration-700 ease-in-out w-[300px] absolute flex flex-col gap-3 top-0 right-0 h-screen py-16 px-5 text-left bg-black text-white z-20 mdbl:hidden`}`}
                     ref={menuRef}>
                     {
-                        currentNavbar.map((el: NavbarItem) => {
+                        currentNavbar?.map((el: NavbarItem) => {
                             const isActive = pathname === el.route;
                             const hasSubtitles = el.subtitles && el.subtitles.length > 0;
 
@@ -79,28 +82,28 @@ const Header = () => {
                                     {hasSubtitles ? (
                                         <Link
                                             href={el.route}
-                                            className={` text-[18px] font-bold custom:hover:text-red uppercase cursor-pointer  
-                                            ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? ' inline text-red custom:border-b-2 custom:border-b-red group/subtitles' : ''}`}>
-                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " custom:hover:border-b-2 custom:hover:border-b-red hover:duration-300"}`}>{el.title}
-                                                {hasSubtitles && !subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
+                                            className={` text-[18px] font-bold mdbl:hover:text-red uppercase cursor-pointer  
+                                            ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? ' inline text-red mdbl:border-b-2 mdbl:border-b-red group/subtitles' : ''}`}>
+                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " mdbl:hover:border-b-2 mdbl:hover:border-b-red hover:duration-300"}`}>{el.title}
+                                                {hasSubtitles && !subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
                                                     <FaAngleDown />
                                                 </span>}
-                                                {hasSubtitles && subTitleVisible && <span className={` flex custom:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
+                                                {hasSubtitles && subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
                                                     <FaAngleUp />
                                                 </span>}
                                             </span>
-                                            <div className=" flex custom:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
+                                            <div className=" flex mdbl:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
                                         </Link>
                                     ) : (
                                         <Link
                                             href={el.route}
                                             className={`text-[18px] font-bold hover:text-red uppercase group/subtitles 
-                                            ${(isActive && el.route != "/") ? 'text-red custom:border-b-2 custom:border-b-red' : ''}`}
+                                            ${(isActive && el.route != "/") ? 'text-red mdbl:border-b-2 mdbl:border-b-red' : ''}`}
                                             onClick={() => setShowNavBar(false)}>
-                                            <span className={` ${showNavBar ? "flex justify-between" : "custom:hover:border-b-2 custom:hover:border-b-red custom:hover:duration-300"}`}>
+                                            <span className={` ${showNavBar ? "flex justify-between" : "mdbl:hover:border-b-2 mdbl:hover:border-b-red mdbl:hover:duration-300"}`}>
                                                 {el.title}
                                             </span>
-                                            <div className="flex custom:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
+                                            <div className="flex mdbl:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
                                         </Link>
                                     )}
                                     {
@@ -114,11 +117,11 @@ const Header = () => {
                                                         key={subtitle.id}
                                                         href={subtitle.route}
                                                         onClick={() => { setShowNavBar(false) }}
-                                                        className=" block py-2 px-4 custom:px-0 uppercase text-[17px] text-white hover:duration-700 custom:text-[#dbcdcd] custom:hover:text-white"
+                                                        className=" block py-2 px-4 mdbl:px-0 uppercase text-[17px] text-white hover:duration-700 mdbl:text-[#dbcdcd] mdbl:hover:text-white"
                                                     >
                                                         {subtitle.title}
-                                                        {index < subtitlesArray.length - 1 && <div className="flex custom:hidden w-full border-b-[1px] mt-3 border-b-[#dbcdcd]"></div>}
-                                                        {index < subtitlesArray.length - 1 && <span className="mx-5 text-white hidden custom:inline">|</span>}
+                                                        {index < subtitlesArray.length - 1 && <div className="flex mdbl:hidden w-full border-b-[1px] mt-3 border-b-[#dbcdcd]"></div>}
+                                                        {index < subtitlesArray.length - 1 && <span className="mx-5 text-white hidden mdbl:inline">|</span>}
                                                     </Link>
                                                 ))}
                                             </div>

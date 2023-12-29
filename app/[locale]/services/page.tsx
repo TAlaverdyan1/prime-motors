@@ -6,7 +6,7 @@ export async function generateMetadata() {
   const t = await getTranslations('services');
 
   return {
-    title: t('title') + SITE_SUFFIX,
+    title: (t('title')).toUpperCase() + SITE_SUFFIX,
   };
 }
 
