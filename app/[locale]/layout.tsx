@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
+import { useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import './globals.css';
@@ -33,7 +34,8 @@ export default function RootLayout({
   const locale = useLocale();
 
   if (params.locale !== locale) {
-    notFound();
+    const router = useRouter();
+    router.push('/');
   }
 
   return (

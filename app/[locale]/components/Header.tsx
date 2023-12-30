@@ -82,7 +82,7 @@ const Header = () => {
                                     {hasSubtitles ? (
                                         desktopMedia ? (
                                             <Link
-                                                href={el.route}
+                                                href={`/${locale}${el.route}`}
                                                 className={` text-[18px] font-bold mdbl:hover:text-red uppercase cursor-pointer  
                                             ${(isActive || el.subtitles?.some(sub => `/${pathname.split('/')[2]}` === sub.route)) ? ' inline text-red mdbl:border-b-2 mdbl:border-b-red group/subtitles' : ''}`}>
                                                 <span className={`${showNavBar ? "" : " mdbl:hover:border-b-2 mdbl:hover:border-b-red hover:duration-300"}`}>{el.title}
@@ -112,7 +112,7 @@ const Header = () => {
                                         )
                                     ) : (
                                         <Link
-                                            href={el.route}
+                                            href={`/${locale}${el.route}`}
                                             className={`text-[18px] font-bold hover:text-red uppercase group/subtitles 
                                             ${(isActive && el.route != "/") ? 'text-red mdbl:border-b-2 mdbl:border-b-red' : ''}`}
                                             onClick={() => setShowNavBar(false)}>
@@ -131,7 +131,7 @@ const Header = () => {
                                                 {el.subtitles?.map((subtitle: NavbarItem, index: number, subtitlesArray: NavbarItem[]) => (
                                                     <Link
                                                         key={subtitle.id}
-                                                        href={subtitle.route}
+                                                        href={`/${locale}${subtitle.route}`}
                                                         onClick={() => { setShowNavBar(false) }}
                                                         className=" block py-2 px-4 mdbl:px-0 uppercase text-[17px] text-white hover:duration-700 mdbl:text-[#dbcdcd] mdbl:hover:text-white"
                                                     >

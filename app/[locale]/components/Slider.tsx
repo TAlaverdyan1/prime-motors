@@ -65,7 +65,7 @@ const Slider = () => {
                         >
                             <div className={animatedClasses}>
                                 <div className='title'>{el.title}</div>
-                                <Link href={el.route} className='btn'>{el.btn_text}</Link>
+                                <Link href={`/${locale}${el.route}`} className='btn'>{el.btn_text}</Link>
                             </div>
                         </div>
                     )

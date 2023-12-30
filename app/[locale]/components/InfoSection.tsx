@@ -30,7 +30,7 @@ const InfoSection = () => {
                 </div>
             ))}
             <div className="my-10">
-                <Link href={"/about-us"} className="p-3 text-red font-bold border-2 border-red md:px-8 md:text-[18px]">
+                <Link href={`/${locale}/about-us`} className="p-3 text-red font-bold border-2 border-red md:px-8 md:text-[18px]">
                     <span className="hover:border-b-2 hover:border-b-red duration-300">{currentInfoSection.btn_text}</span>
                 </Link>
             </div>
