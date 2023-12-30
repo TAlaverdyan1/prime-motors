@@ -823,7 +823,7 @@ export const partnersSection = {
             {
                 id: 1,
                 subtitle: "Lorem Ipsum",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
@@ -856,7 +856,7 @@ export const partnersSection = {
             {
                 id: 4,
                 subtitle: "Lorem Ipsum",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
@@ -889,7 +889,7 @@ export const partnersSection = {
             {
                 id: 7,
                 subtitle: "Lorem Ipsum",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
@@ -927,7 +927,7 @@ export const partnersSection = {
             {
                 id: 1,
                 subtitle: "Клиент важен",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
@@ -960,7 +960,7 @@ export const partnersSection = {
             {
                 id: 4,
                 subtitle: "Клиент важен",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
@@ -993,7 +993,7 @@ export const partnersSection = {
             {
                 id: 7,
                 subtitle: "Клиент важен",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
@@ -1031,7 +1031,7 @@ export const partnersSection = {
             {
                 id: 1,
                 subtitle: "Հաճախորդը կարևոր է",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
@@ -1067,7 +1067,7 @@ export const partnersSection = {
             {
                 id: 4,
                 subtitle: "Հաճախորդը կարևոր է",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
@@ -1103,7 +1103,7 @@ export const partnersSection = {
             {
                 id: 7,
                 subtitle: "Հաճախորդը կարևոր է",
-                image: "/images/partners/partner1.jpg",
+                image: "/images/partners/partner3.jpg",
                 link: "/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
