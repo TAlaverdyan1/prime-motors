@@ -17,8 +17,7 @@ const Header = () => {
     const [desktopMedia, setDesktopMedia] = useState<boolean>(true);
     const [showNavBar, setShowNavBar] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
-    const path = usePathname();
-    const parts = path.split('/');
+    const parts = pathname.split('/');
 
     const currentNavbar = (navbar as NavbarData)[locale as keyof NavbarData];
 
@@ -71,8 +70,9 @@ const Header = () => {
                     ref={menuRef}>
                     {
                         currentNavbar?.map((el: NavbarItem) => {
-                            const isActive = pathname === el.route;
+                            const isActive = pathname === `/${parts[1]}${el.route}` || (el.route === "/" && pathname === `/${parts[1]}`);
                             const hasSubtitles = el.subtitles && el.subtitles.length > 0;
+
 
                             return (
                                 <div
@@ -80,20 +80,36 @@ const Header = () => {
                                     onMouseMove={() => { desktopMedia && (hasSubtitles ? setSubTitleVisible(true) : setSubTitleVisible(false)); }}
                                     onClick={(e) => { e.stopPropagation(); !desktopMedia && (hasSubtitles && setSubTitleVisible(!subTitleVisible)) }}>
                                     {hasSubtitles ? (
-                                        <Link
-                                            href={el.route}
-                                            className={` text-[18px] font-bold mdbl:hover:text-red uppercase cursor-pointer  
-                                            ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? ' inline text-red mdbl:border-b-2 mdbl:border-b-red group/subtitles' : ''}`}>
-                                            <span className={`${!desktopMedia ? "flex justify-between" : ""} ${showNavBar ? "" : " mdbl:hover:border-b-2 mdbl:hover:border-b-red hover:duration-300"}`}>{el.title}
-                                                {hasSubtitles && !subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
-                                                    <FaAngleDown />
-                                                </span>}
-                                                {hasSubtitles && subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => pathname === sub.route)) ? "text-red" : "text-white"}`}>
-                                                    <FaAngleUp />
-                                                </span>}
-                                            </span>
-                                            <div className=" flex mdbl:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
-                                        </Link>
+                                        desktopMedia ? (
+                                            <Link
+                                                href={el.route}
+                                                className={` text-[18px] font-bold mdbl:hover:text-red uppercase cursor-pointer  
+                                            ${(isActive || el.subtitles?.some(sub => `/${pathname.split('/')[2]}` === sub.route)) ? ' inline text-red mdbl:border-b-2 mdbl:border-b-red group/subtitles' : ''}`}>
+                                                <span className={`${showNavBar ? "" : " mdbl:hover:border-b-2 mdbl:hover:border-b-red hover:duration-300"}`}>{el.title}
+                                                    {hasSubtitles && !subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => `/${pathname.split('/')[2]}` === sub.route)) ? "text-red" : "text-white"}`}>
+                                                        <FaAngleDown />
+                                                    </span>}
+                                                    {hasSubtitles && subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => `/${pathname.split('/')[2]}` === sub.route)) ? "text-red" : "text-white"}`}>
+                                                        <FaAngleUp />
+                                                    </span>}
+                                                </span>
+                                                <div className=" flex mdbl:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
+                                            </Link>
+                                        ) : (
+                                            <div
+                                                className={` text-[18px] font-bold mdbl:hover:text-red uppercase cursor-pointer  
+                                            ${(isActive || el.subtitles?.some(sub => `/${pathname.split('/')[2]}` === sub.route)) ? ' inline text-red mdbl:border-b-2 mdbl:border-b-red group/subtitles' : ''}`}>
+                                                <span className={`flex justify-between ${showNavBar ? "" : " mdbl:hover:border-b-2 mdbl:hover:border-b-red hover:duration-300"}`}>{el.title}
+                                                    {hasSubtitles && !subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => `/${pathname.split('/')[2]}` === sub.route)) ? "text-red" : "text-white"}`}>
+                                                        <FaAngleDown />
+                                                    </span>}
+                                                    {hasSubtitles && subTitleVisible && <span className={` flex mdbl:hidden items-center ${(isActive || el.subtitles?.some(sub => `/${pathname.split('/')[2]}` === sub.route)) ? "text-red" : "text-white"}`}>
+                                                        <FaAngleUp />
+                                                    </span>}
+                                                </span>
+                                                <div className=" flex mdbl:hidden w-full border-b-[1px] mt-3 border-b-white"></div>
+                                            </div>
+                                        )
                                     ) : (
                                         <Link
                                             href={el.route}
