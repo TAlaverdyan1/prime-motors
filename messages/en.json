@@ -22,5 +22,8 @@
   },
   "services": {
     "title": "SERVICES"
+  },
+  "not-found": {
+    "title": "Not Found"
   }
 }

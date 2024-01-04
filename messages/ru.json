@@ -22,5 +22,8 @@
   },
   "services": {
     "title": "УСЛУГИ"
+  },
+  "not-found": {
+    "title": "Не найдено"
   }
 }

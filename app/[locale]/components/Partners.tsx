@@ -25,7 +25,8 @@ const Partners = () => {
                                 </div>
                                 <Link
                                     className=" p-3 text-red font-bold border-2 border-red md:px-8 md:text-[18px]"
-                                    href={el.link}>
+                                    href={el.link}
+                                    target="_blank">
                                     <span className=" hover:border-b-2 hover:border-b-red duration-300">{el.btn_text}</span>
                                 </Link>
                             </div>

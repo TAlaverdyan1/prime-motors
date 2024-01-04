@@ -824,7 +824,7 @@ export const partnersSection = {
                 id: 1,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -835,7 +835,7 @@ export const partnersSection = {
                 id: 2,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -846,7 +846,7 @@ export const partnersSection = {
                 id: 3,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -857,7 +857,7 @@ export const partnersSection = {
                 id: 4,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -868,7 +868,7 @@ export const partnersSection = {
                 id: 5,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -879,7 +879,7 @@ export const partnersSection = {
                 id: 6,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -890,7 +890,7 @@ export const partnersSection = {
                 id: 7,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -901,7 +901,7 @@ export const partnersSection = {
                 id: 8,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -912,7 +912,7 @@ export const partnersSection = {
                 id: 9,
                 subtitle: "Lorem Ipsum",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "See More",
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus ut orci quis tempor. 
             Praesent interdum ex mi, sed dictum nisl facilisis eget. Duis et consequat risus. Nunc varius magna condimentum 
@@ -928,7 +928,7 @@ export const partnersSection = {
                 id: 1,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -939,7 +939,7 @@ export const partnersSection = {
                 id: 2,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -950,7 +950,7 @@ export const partnersSection = {
                 id: 3,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -961,7 +961,7 @@ export const partnersSection = {
                 id: 4,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -972,7 +972,7 @@ export const partnersSection = {
                 id: 5,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -983,7 +983,7 @@ export const partnersSection = {
                 id: 6,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -994,7 +994,7 @@ export const partnersSection = {
                 id: 7,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -1005,7 +1005,7 @@ export const partnersSection = {
                 id: 8,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -1016,7 +1016,7 @@ export const partnersSection = {
                 id: 9,
                 subtitle: "Клиент важен",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Узнать больше",
                 description: `Клиент очень важен, за клиентом пойдет клиент. Лодка на какое-то время становится клиникой. 
                 Иногда это исходит от меня, но игрокам нужно быть спокойными. Дуис и результат смеха. Теперь у казино большая 
@@ -1032,7 +1032,7 @@ export const partnersSection = {
                 id: 1,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1044,7 +1044,7 @@ export const partnersSection = {
                 id: 2,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1056,7 +1056,7 @@ export const partnersSection = {
                 id: 3,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1068,7 +1068,7 @@ export const partnersSection = {
                 id: 4,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1080,7 +1080,7 @@ export const partnersSection = {
                 id: 5,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1092,7 +1092,7 @@ export const partnersSection = {
                 id: 6,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1104,7 +1104,7 @@ export const partnersSection = {
                 id: 7,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1116,7 +1116,7 @@ export const partnersSection = {
                 id: 8,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner2.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1128,7 +1128,7 @@ export const partnersSection = {
                 id: 9,
                 subtitle: "Հաճախորդը կարևոր է",
                 image: "/images/partners/partner3.jpg",
-                link: "/",
+                link: "http://primemotors.am/%d5%b4%d5%a5%d6%80-%d5%b4%d5%a1%d5%bd%d5%ab%d5%b6/",
                 btn_text: "Տեսնել ավելին",
                 description: `Հաճախորդը շատ կարևոր է, հաճախորդին հետևելու է հաճախորդը։ Նավն ավարտվում է որոշ ժամանակով կլինիկա: 
                 Երբեմն դա ինձնից է, բայց խաղացողները պետք է հեշտ լինեն: Դուիսը և ծիծաղի արդյունքը. Այժմ խաղատունը մեծ պատմություն 
@@ -1471,3 +1471,4 @@ export const contactUsSection = {
         ],
     },
 };
+

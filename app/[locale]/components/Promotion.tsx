@@ -22,8 +22,8 @@ const Promotion = () => {
                             <div className=" flex flex-col justify-center items-center border-2 border-red rounded py-6">
                                 <Image
                                     src={el.image}
-                                    width={228}
-                                    height={228}
+                                    width={200}
+                                    height={200}
                                     alt="iourMissionSectionImg"
                                     className=" mx-4 px-4" />
                                 <div className=" text-center px-4 my-3">

@@ -14,10 +14,10 @@ const Blog = () => {
         <div className=" mt-20">
             <div className="text-[18px] text-red font-bold md:text-[30px] uppercase text-center px-4 m-10">{currentBlogSection?.title}</div>
             <div className=" mdbl:mt-20 mb-4 md:mb-6">
+                <div className="bg-red h-[.5px] w-full" />
                 {
-                    currentBlogSection?.content.slice().reverse().map((el: BlogsSectionContent) => (
+                    currentBlogSection?.content.slice().reverse().map((el: BlogsSectionContent, index: number) => (
                         <div key={el.id}>
-                            <div className=" bg-red py-[.5px] w-full"></div>
                             <div className=" flex flex-row justify-between mb-6 px-4 md:px-6 lg:px-12">
                                 <div className=" my-6 w-[100%] text-left md:w-3/4 md:mr-8">
                                     <div className=" text-[17px] md:text-[18px] font-bold capitalize text-center md:text-left mb-6">{el.subtitle}</div>
@@ -33,6 +33,7 @@ const Blog = () => {
                                         sizes="(max-width: 270px) 100vw, 270px" />
                                 </div>
                             </div>
+                            {index !== currentBlogSection.content.length - 1 && <div className="bg-red h-[.5px] w-full" />}
                         </div>
                     ))
                 }

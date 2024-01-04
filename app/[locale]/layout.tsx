@@ -2,17 +2,16 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import './globals.css';
+import '../globals.css';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-
 
 export const SITE_SUFFIX = ' | Prime Motors';
 
 export const metadata: Metadata = {
   title: 'Prime Motors',
   icons: {
-    icon: "./images/logo.png"
+    icon: "./favicon.ico?v=1"
   }
 }
 

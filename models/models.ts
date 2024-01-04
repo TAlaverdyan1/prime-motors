@@ -231,3 +231,4 @@ export type ContactUsInfoSection = {
     ru: ContactUsSectionItem;
     am: ContactUsSectionItem;
 };
+
