@@ -18,7 +18,7 @@ const Blog = () => {
                 {
                     currentBlogSection?.content.slice().reverse().map((el: BlogsSectionContent, index: number) => (
                         <div key={el.id}>
-                            <div className=" flex flex-row justify-between mb-6 px-4 md:px-6 lg:px-12">
+                            <div className=" flex flex-row justify-between mb-1 mdbl:mb-6 px-4 md:px-6 lg:px-12">
                                 <div className=" my-6 w-[100%] text-left md:w-3/4 md:mr-8">
                                     <div className=" text-[17px] md:text-[18px] font-bold capitalize text-center md:text-left mb-6">{el.subtitle}</div>
                                     <div className="text-[16px] text-justify md:text-left">{el.description}</div>

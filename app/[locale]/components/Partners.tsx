@@ -20,7 +20,7 @@ const Partners = () => {
                         <div key={el.id} className={` block mdbl:flex items-center mdbl:mt-10 ${el.id % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                             <div className=" text-center px-4 py-10 mdbl:w-1/2 md:px-6 lg:px-12 xl:px-24">
                                 <div className=" mb-8">
-                                    <div className="text-[17px] md:text-[18px] font-bold text-red m-3 px-4 capitalize">{el.subtitle}</div>
+                                    <div className="text-[17px] md:text-[18px] font-bold text-red mt-[-7px] mb-3 px-4 capitalize">{el.subtitle}</div>
                                     <span className=" text-[16px]">{el.description}</span>
                                 </div>
                                 <Link
